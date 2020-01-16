@@ -1,0 +1,1423 @@
+#  ___ _            _ _    _ _    __
+# / __(_)_ __  _ __| (_)__(_) |_ /_/
+# \__ \ | '  \| '_ \ | / _| |  _/ -_)
+# |___/_|_|_|_| .__/_|_\__|_|\__\___|
+#             |_| Module: OpenDataSoft 4.0
+components:
+  schemas:
+    Error404:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 404
+    ArrayOfODSArbreRemarquable:
+      type: array
+      items:
+        $ref: '#/components/schemas/ODSArbreRemarquable'
+    ArrayOfODSAPIAgroSolsBretagne:
+      type: array
+      items:
+        $ref: '#/components/schemas/ODSAPIAgroSolsBretagne'
+    ODSArbreRemarquable:
+      type: object
+      properties:
+        idemplacement:
+          description: IDEMPLACEMENT
+          type: string
+        pepiniere:
+          description: PEPINIERE
+          type: string
+        typeemplacement:
+          description: TYPEEMPLACEMENT
+          type: string
+        numero:
+          description: NUMERO
+          type: string
+        hauteurenm:
+          description: HAUTEUR EN M
+          type: number
+        espece:
+          description: ESPECE
+          type: string
+        arrondissement:
+          description: ARRONDISSEMENT
+          type: string
+        varieteoucultivar:
+          description: VARIETE OU CULTIVAR
+          type: string
+        geom_x_y:
+          description: Geo point
+          type: string
+        complementadresse:
+          description: COMPLEMENTADRESSE
+          type: string
+        stadedeveloppement:
+          description: STADEDEVELOPPEMENT
+          type: string
+        idbase:
+          description: IDBASE
+          type: number
+        domanialite:
+          description: DOMANIALITE
+          type: string
+        circonferenceencm:
+          description: CIRCONFERENCE EN CM
+          type: number
+        remarquable:
+          description: REMARQUABLE
+          type: string
+        genre:
+          description: GENRE
+          type: string
+        adresse:
+          description: ADRESSE
+          type: string
+        dateplantation:
+          description: DATEPLANTATION
+          type: string
+        libellefrancais:
+          description: LIBELLEFRANCAIS
+          type: string
+        row_id:
+          description: Unique technical row ID
+          type: string
+        objectid:
+          description: OBJECTID
+          type: integer
+    PublicationResult:
+      type: object
+      properties:
+        mime:
+          description: MIME type
+          type: string
+        content:
+          description: Content (plain text or base64 encoded)
+          type: string
+    ArrayOfODSHotspotParisWifi:
+      type: array
+      items:
+        $ref: '#/components/schemas/ODSHotspotParisWifi'
+    ActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
+          type: string
+    ODSHotspotParisWifi:
+      type: object
+      properties:
+        ville:
+          description: VILLE
+          type: string
+        adresse_complete:
+          description: Adresse complète
+          type: string
+        adresse:
+          description: Adresse
+          type: string
+        row_id:
+          description: Unique technical row ID
+          type: string
+        cp:
+          description: CP
+          type: string
+        nom_site:
+          description: Nom site
+          type: string
+    TreeviewData:
+      type: object
+      properties:
+        item:
+          description: Object item with lists of linked objects' items
+          type: object
+    ODSAPIAgroSolsBretagne:
+      type: object
+      properties:
+        p_mat_2:
+          description: P_MAT_2
+          type: integer
+        fsol_dom:
+          description: FSOL_DOM
+          type: string
+        text_dom:
+          description: TEXT_DOM
+          type: string
+        p_epais2:
+          description: P_EPAIS2
+          type: integer
+        p_fsol_2:
+          description: P_FSOL_2
+          type: integer
+        p_mat_dom:
+          description: P_MAT_DOM
+          type: number
+        fsol_2:
+          description: FSOL_2
+          type: string
+        drai_dom:
+          description: DRAI_DOM
+          type: string
+        epais_2:
+          description: EPAIS_2
+          type: string
+        p_drai_2:
+          description: P_DRAI_2
+          type: integer
+        p_drai_dom:
+          description: P_DRAI_DOM
+          type: number
+        geo_point_2d:
+          description: Geo Point
+          type: string
+        text_2:
+          description: TEXT_2
+          type: string
+        n_entite_p:
+          description: N_ENTITE_P
+          type: integer
+        nomucs:
+          description: NOMUCS
+          type: string
+        no_etude:
+          description: NO_ETUDE
+          type: integer
+        p_text_2:
+          description: P_TEXT_2
+          type: integer
+        p_text_dom:
+          description: P_TEXT_DOM
+          type: number
+        geo_shape:
+          description: Geo Shape
+          type: string
+        p_epaisdom:
+          description: P_EPAISDOM
+          type: integer
+        epais_dom:
+          description: EPAIS_DOM
+          type: string
+        n_ucs:
+          description: N_UCS
+          type: integer
+        p_fsol_dom:
+          description: P_FSOL_DOM
+          type: integer
+        drai_2:
+          description: DRAI_2
+          type: string
+        entite_p:
+          description: ENTITE_P
+          type: string
+        superficie:
+          description: SUPERFICIE
+          type: number
+        row_id:
+          description: Unique technical row ID
+          type: string
+        mat_2:
+          description: MAT_2
+          type: string
+        mat_dom:
+          description: MAT_DOM
+          type: string
+    Error400:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 400
+    Error401:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 401
+    Error500:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 500
+    Error403:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 403
+  securitySchemes:
+    basicAuth:
+      scheme: basic
+      type: http
+    bearerAuth:
+      bearerFormat: Simplicite token
+      scheme: bearer
+      type: http
+openapi: 3.0.2
+paths:
+  /login:
+    get:
+      summary: Login (obtain bearer token)
+      security:
+      - basicAuth: []
+      operationId: login
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json: {}
+            text/plain: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: string
+          enum:
+          - json
+          - oauth2
+          - token
+        in: query
+        name: _output
+        description: Optional output format
+        required: false
+      tags:
+      - session
+  /rest/ODSAPIAgroSolsBretagne/{row_id}:
+    post:
+      summary: Create a new ODSAPIAgroSolsBretagnebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ODSAPIAgroSolsBretagne'
+      operationId: obj-odsapiagrosolsbretagne-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSAPIAgroSolsBretagne'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSAPIAgroSolsBretagne
+    get:
+      summary: Get a ODSAPIAgroSolsBretagne business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odsapiagrosolsbretagne-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSAPIAgroSolsBretagne'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - ODSAPIAgroSolsBretagne
+    delete:
+      summary: Delete a ODSAPIAgroSolsBretagne business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odsapiagrosolsbretagne-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSAPIAgroSolsBretagne
+    put:
+      summary: Update a ODSAPIAgroSolsBretagnebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ODSAPIAgroSolsBretagne'
+      operationId: obj-odsapiagrosolsbretagne-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSAPIAgroSolsBretagne'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSAPIAgroSolsBretagne
+  /rest/ODSArbreRemarquable/{row_id}:
+    post:
+      summary: Create a new ODSArbreRemarquablebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ODSArbreRemarquable'
+      operationId: obj-odsarbreremarquable-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSArbreRemarquable'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSArbreRemarquable
+    get:
+      summary: Get a ODSArbreRemarquable business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odsarbreremarquable-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSArbreRemarquable'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - ODSArbreRemarquable
+    delete:
+      summary: Delete a ODSArbreRemarquable business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odsarbreremarquable-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSArbreRemarquable
+    put:
+      summary: Update a ODSArbreRemarquablebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ODSArbreRemarquable'
+      operationId: obj-odsarbreremarquable-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSArbreRemarquable'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSArbreRemarquable
+  /logout:
+    get:
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      tags:
+      - session
+  /rest/ODSHotspotParisWifi/{row_id}:
+    post:
+      summary: Create a new ODSHotspotParisWifibusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ODSHotspotParisWifi'
+      operationId: obj-odshotspotpariswifi-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSHotspotParisWifi'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSHotspotParisWifi
+    get:
+      summary: Get a ODSHotspotParisWifi business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odshotspotpariswifi-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSHotspotParisWifi'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - ODSHotspotParisWifi
+    delete:
+      summary: Delete a ODSHotspotParisWifi business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odshotspotpariswifi-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSHotspotParisWifi
+    put:
+      summary: Update a ODSHotspotParisWifibusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ODSHotspotParisWifi'
+      operationId: obj-odshotspotpariswifi-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ODSHotspotParisWifi'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSHotspotParisWifi
+  /rest/ODSHotspotParisWifi:
+    get:
+      summary: Search ODSHotspotParisWifi business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-odshotspotpariswifi-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfODSHotspotParisWifi'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: nom_site
+        description: Search filter for Nom site
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: adresse
+        description: Search filter for Adresse
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cp
+        description: Search filter for CP
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: ville
+        description: Search filter for VILLE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: adresse_complete
+        description: Search filter for Adresse complète
+        required: false
+      tags:
+      - ODSHotspotParisWifi
+  /rest/ODSArbreRemarquable:
+    get:
+      summary: Search ODSArbreRemarquable business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-odsarbreremarquable-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfODSArbreRemarquable'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: geom_x_y
+        description: Search filter for Geo point
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: genre
+        description: Search filter for GENRE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: espece
+        description: Search filter for ESPECE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: adresse
+        description: Search filter for ADRESSE
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: idbase
+        description: Search filter for IDBASE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: typeemplacement
+        description: Search filter for TYPEEMPLACEMENT
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: domanialite
+        description: Search filter for DOMANIALITE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: arrondissement
+        description: Search filter for ARRONDISSEMENT
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: complementadresse
+        description: Search filter for COMPLEMENTADRESSE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: numero
+        description: Search filter for NUMERO
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: idemplacement
+        description: Search filter for IDEMPLACEMENT
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: circonferenceencm
+        description: Search filter for CIRCONFERENCE EN CM
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: hauteurenm
+        description: Search filter for HAUTEUR EN M
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: stadedeveloppement
+        description: Search filter for STADEDEVELOPPEMENT
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: pepiniere
+        description: Search filter for PEPINIERE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: varieteoucultivar
+        description: Search filter for VARIETE OU CULTIVAR
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: dateplantation
+        description: Search filter for DATEPLANTATION
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: remarquable
+        description: Search filter for REMARQUABLE
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: objectid
+        description: Search filter for OBJECTID
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: libellefrancais
+        description: Search filter for LIBELLEFRANCAIS
+        required: false
+      tags:
+      - ODSArbreRemarquable
+  /rest/ODSAPIAgroSolsBretagne:
+    get:
+      summary: Search ODSAPIAgroSolsBretagne business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-odsapiagrosolsbretagne-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfODSAPIAgroSolsBretagne'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: geo_point_2d
+        description: Search filter for Geo Point
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: geo_shape
+        description: Search filter for Geo Shape
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: n_ucs
+        description: Search filter for N_UCS
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: nomucs
+        description: Search filter for NOMUCS
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: superficie
+        description: Search filter for SUPERFICIE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mat_dom
+        description: Search filter for MAT_DOM
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: p_mat_dom
+        description: Search filter for P_MAT_DOM
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mat_2
+        description: Search filter for MAT_2
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: p_mat_2
+        description: Search filter for P_MAT_2
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: drai_dom
+        description: Search filter for DRAI_DOM
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: p_drai_dom
+        description: Search filter for P_DRAI_DOM
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: drai_2
+        description: Search filter for DRAI_2
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: p_drai_2
+        description: Search filter for P_DRAI_2
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: text_dom
+        description: Search filter for TEXT_DOM
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: p_text_dom
+        description: Search filter for P_TEXT_DOM
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: text_2
+        description: Search filter for TEXT_2
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: p_text_2
+        description: Search filter for P_TEXT_2
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: fsol_dom
+        description: Search filter for FSOL_DOM
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: p_fsol_dom
+        description: Search filter for P_FSOL_DOM
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: fsol_2
+        description: Search filter for FSOL_2
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: p_fsol_2
+        description: Search filter for P_FSOL_2
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: epais_dom
+        description: Search filter for EPAIS_DOM
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: p_epaisdom
+        description: Search filter for P_EPAISDOM
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: epais_2
+        description: Search filter for EPAIS_2
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: p_epais2
+        description: Search filter for P_EPAIS2
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: no_etude
+        description: Search filter for NO_ETUDE
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: entite_p
+        description: Search filter for ENTITE_P
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: n_entite_p
+        description: Search filter for N_ENTITE_P
+        required: false
+      tags:
+      - ODSAPIAgroSolsBretagne
+  /:
+    get:
+      summary: Get user session information
+      security:
+      - bearerAuth: []
+      operationId: info
+      responses:
+        '200':
+          description: Success in getting user session information
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: texts
+        description: Texts?
+        required: false
+      tags:
+      - session
+info:
+  license:
+    name: Simplicite license
+    url: http://www.simplicitesoftware.com
+  contact:
+    name: Simplicite Software
+    url: http://www.simplicitesoftware.com
+    email: contact@simplicitesoftware.com
+  description: API for module OpenDataSoft
+  title: OpenDataSoft
+  version: '4.0'
+tags:
+- name: ODSAPIAgroSolsBretagne
+  description: Brittany soil
+- name: ODSArbreRemarquable
+  description: Remarquable tree Paris
+- name: ODSHotspotParisWifi
+  description: Paris WiFi hotspot

@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplicite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
+<object>
+	<name>Module</name>
+	<action>upsert</action>
+	<data>
+		<mdl_name>OpenDataSoft</mdl_name>
+		<mdl_version>4.0</mdl_version>
+		<mdl_prefix/>
+		<mdl_url><![CDATA[{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-opendatasoft.git"
+	}
+}
+]]></mdl_url>
+		<mdl_lastupd>2020-01-16 13:05:24</mdl_lastupd>
+		<mdl_comment><![CDATA[### Introduction
+
+**OpenDataSoft** remote business objects examples.
+
+### Import
+
+To import this module:
+
+- Create a module named `OpenDataSoft`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-opendatasoft.git"
+	}
+}
+```
+
+- Click on the _Import module_ button]]></mdl_comment>
+	</data>
+</object>
+<object>
+	<name>View</name>
+	<action>upsert</action>
+	<data>
+		<viw_name>ODSDemoHome</viw_name>
+		<viw_ui><![CDATA[<div class="area" data-area="1:="></div>]]></viw_ui>
+		<viw_order>300</viw_order>
+		<viw_icon>opendatasoft</viw_icon>
+		<viw_disp_id.dis_code/>
+		<viw_scope/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<viw_theme_id.thm_name>ThemeLight</viw_theme_id.thm_name>
+	</data>
+</object>
+<object>
+	<name>Group</name>
+	<action>upsert</action>
+	<data>
+		<grp_name>ODS_USER</grp_name>
+		<grp_comment/>
+		<grp_type>G</grp_type>
+		<grp_parent_id.grp_name/>
+		<grp_home_id.viw_name>ODSDemoHome</grp_home_id.viw_name>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Profile</name>
+	<action>upsert</action>
+	<data>
+		<prf_profile_id.grp_name>ODS_USER</prf_profile_id.grp_name>
+		<prf_group_id.grp_name>SOCIAL_USER</prf_group_id.grp_name>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<prf_profile_id.grp_name>ODS_USER</prf_profile_id.grp_name>
+		<prf_group_id.grp_name>USER_PASSWORD</prf_group_id.grp_name>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<prf_profile_id.grp_name>ODS_USER</prf_profile_id.grp_name>
+		<prf_group_id.grp_name>WEB_USER</prf_group_id.grp_name>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Responsability</name>
+	<action>upsert</action>
+	<data>
+		<rsp_login_id.usr_login>designer</rsp_login_id.usr_login>
+		<rsp_group_id.grp_name>ODS_USER</rsp_group_id.grp_name>
+		<rsp_start_dt>2015-02-10</rsp_start_dt>
+		<rsp_end_dt/>
+		<rsp_activ>1</rsp_activ>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Domain</name>
+	<action>upsert</action>
+	<data>
+		<obd_name>ODSDomain</obd_name>
+		<obd_comment/>
+		<obd_type>D</obd_type>
+		<obd_view_id.viw_name>ODSDemoHome</obd_view_id.viw_name>
+		<obd_nohome>0</obd_nohome>
+		<obd_icon>opendatasoft</obd_icon>
+		<obd_order>74000</obd_order>
+		<obd_domain_id.obd_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>ObjectInternal</name>
+	<action>upsert</action>
+	<data>
+		<obo_name>ODSAPIAgroSolsBretagne</obo_name>
+		<obo_dbtable>service-opendatasoft</obo_dbtable>
+		<obo_class/>
+		<obo_script_id/>
+		<obo_usets>0</obo_usets>
+		<obo_nosearch>0</obo_nosearch>
+		<obo_comment><![CDATA[OpenDataSoft _Sols de Bretagne (API Agro)_ object.
+
+**Note**: the fields are retreived from OpenDataSoft metadata]]></obo_comment>
+		<obo_type>O</obo_type>
+		<obo_searchspec><![CDATA[{
+    "base_url": "https://plateforme.api-agro.fr/api",
+    "name": "sols-bretagne-1-250000"
+}]]></obo_searchspec>
+		<obo_delspec/>
+		<obo_exportorder/>
+		<obo_distinct>0</obo_distinct>
+		<obo_indexable>0</obo_indexable>
+		<obo_groupby>0</obo_groupby>
+		<obo_dfltref/>
+		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_cache>D</obo_cache>
+		<obo_copy>1</obo_copy>
+		<obo_export>1</obo_export>
+		<obo_pagine>1</obo_pagine>
+		<obo_srh_predef>1</obo_srh_predef>
+		<obo_selrow>1</obo_selrow>
+		<obo_updall>1</obo_updall>
+		<obo_delall>1</obo_delall>
+		<obo_listsearch>1</obo_listsearch>
+		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_useform>1</obo_useform>
+		<obo_title/>
+		<obo_icon>apiagro</obo_icon>
+		<obo_refcount>0</obo_refcount>
+		<obo_tree>0</obo_tree>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
+		<obo_printable>1</obo_printable>
+		<obo_followlink>1</obo_followlink>
+		<obo_mergeable>0</obo_mergeable>
+		<obo_social>1</obo_social>
+		<obo_rowid_id.fld_name/>
+		<obo_extend_id.obj_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<obo_btn_reload>P</obo_btn_reload>
+		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_del>P</obo_btn_del>
+		<obo_btn_copy>P</obo_btn_copy>
+		<obo_btn_export>P</obo_btn_export>
+		<obo_btn_listadd>1</obo_btn_listadd>
+		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listupsert/>
+		<obo_btn_updall>P</obo_btn_updall>
+		<obo_btn_delall>P</obo_btn_delall>
+		<obo_btn_merge>P</obo_btn_merge>
+		<obo_btn_save>1</obo_btn_save>
+		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix/>
+		<obo_search_ts/>
+	</data>
+	<data>
+		<obo_name>ODSArbreRemarquable</obo_name>
+		<obo_dbtable>service-opendatasoft</obo_dbtable>
+		<obo_class/>
+		<obo_script_id/>
+		<obo_usets>0</obo_usets>
+		<obo_nosearch>0</obo_nosearch>
+		<obo_comment><![CDATA[OpenDataSoft _Remarquable trees in Paris_ object.
+
+**Note**: the fields are retreived from OpenDataSoft metadata]]></obo_comment>
+		<obo_type>O</obo_type>
+		<obo_searchspec><![CDATA[{"name": "arbresremarquablesparis2011"}]]></obo_searchspec>
+		<obo_delspec/>
+		<obo_exportorder/>
+		<obo_distinct>0</obo_distinct>
+		<obo_indexable>0</obo_indexable>
+		<obo_groupby>0</obo_groupby>
+		<obo_dfltref/>
+		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_cache>D</obo_cache>
+		<obo_copy>1</obo_copy>
+		<obo_export>1</obo_export>
+		<obo_pagine>1</obo_pagine>
+		<obo_srh_predef>1</obo_srh_predef>
+		<obo_selrow>1</obo_selrow>
+		<obo_updall>1</obo_updall>
+		<obo_delall>1</obo_delall>
+		<obo_listsearch>1</obo_listsearch>
+		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_useform>1</obo_useform>
+		<obo_title/>
+		<obo_icon>opendatasoft</obo_icon>
+		<obo_refcount>0</obo_refcount>
+		<obo_tree>0</obo_tree>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
+		<obo_printable>1</obo_printable>
+		<obo_followlink>1</obo_followlink>
+		<obo_mergeable>0</obo_mergeable>
+		<obo_social>1</obo_social>
+		<obo_rowid_id.fld_name/>
+		<obo_extend_id.obj_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<obo_btn_reload>P</obo_btn_reload>
+		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_del>P</obo_btn_del>
+		<obo_btn_copy>P</obo_btn_copy>
+		<obo_btn_export>P</obo_btn_export>
+		<obo_btn_listadd>1</obo_btn_listadd>
+		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listupsert/>
+		<obo_btn_updall>P</obo_btn_updall>
+		<obo_btn_delall>P</obo_btn_delall>
+		<obo_btn_merge>P</obo_btn_merge>
+		<obo_btn_save>1</obo_btn_save>
+		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix/>
+		<obo_search_ts/>
+	</data>
+	<data>
+		<obo_name>ODSHotspotParisWifi</obo_name>
+		<obo_dbtable>service-opendatasoft</obo_dbtable>
+		<obo_class/>
+		<obo_script_id>scripts/ObjectInternal/ODSHotspotParisWifi.js</obo_script_id>
+		<obo_usets>0</obo_usets>
+		<obo_nosearch>0</obo_nosearch>
+		<obo_comment><![CDATA[OpenDataSoft _Wifi hotspots in Paris_ object.
+
+**Note**: the fields are retreived from OpenDataSoft metadata]]></obo_comment>
+		<obo_type>O</obo_type>
+		<obo_searchspec><![CDATA[{"name": "hotspot_paris_wifi"}]]></obo_searchspec>
+		<obo_delspec/>
+		<obo_exportorder/>
+		<obo_distinct>0</obo_distinct>
+		<obo_indexable>0</obo_indexable>
+		<obo_groupby>0</obo_groupby>
+		<obo_dfltref/>
+		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_cache>D</obo_cache>
+		<obo_copy>1</obo_copy>
+		<obo_export>1</obo_export>
+		<obo_pagine>1</obo_pagine>
+		<obo_srh_predef>1</obo_srh_predef>
+		<obo_selrow>1</obo_selrow>
+		<obo_updall>1</obo_updall>
+		<obo_delall>1</obo_delall>
+		<obo_listsearch>1</obo_listsearch>
+		<obo_list_edit>N;L;E</obo_list_edit>
+		<obo_useform>1</obo_useform>
+		<obo_title/>
+		<obo_icon>opendatasoft</obo_icon>
+		<obo_refcount>0</obo_refcount>
+		<obo_tree>0</obo_tree>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
+		<obo_printable>1</obo_printable>
+		<obo_followlink>1</obo_followlink>
+		<obo_mergeable>0</obo_mergeable>
+		<obo_social>1</obo_social>
+		<obo_rowid_id.fld_name/>
+		<obo_extend_id.obj_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<obo_btn_reload>P</obo_btn_reload>
+		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_del>P</obo_btn_del>
+		<obo_btn_copy>P</obo_btn_copy>
+		<obo_btn_export>P</obo_btn_export>
+		<obo_btn_listadd>1</obo_btn_listadd>
+		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listupsert/>
+		<obo_btn_updall>P</obo_btn_updall>
+		<obo_btn_delall>P</obo_btn_delall>
+		<obo_btn_merge>P</obo_btn_merge>
+		<obo_btn_save>1</obo_btn_save>
+		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_close>1</obo_btn_close>
+		<obo_tray>1</obo_tray>
+		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix/>
+		<obo_search_ts/>
+	</data>
+</object>
+<object>
+	<name>Function</name>
+	<action>upsert</action>
+	<data>
+		<fct_name>ODSAPIAgroSolsBretagne-CUD</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
+		<fct_object_id.obj_name>ODSAPIAgroSolsBretagne</fct_object_id.obj_name>
+		<fct_function>CMS</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>ODSArbreRemarquable-R</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
+		<fct_object_id.obj_name>ODSArbreRemarquable</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>ODSDomain-D</fct_name>
+		<fct_object_id.obj_type>D</fct_object_id.obj_type>
+		<fct_object_id.obj_name>ODSDomain</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fct_name>ODSHotspotParisWifi-R</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
+		<fct_object_id.obj_name>ODSHotspotParisWifi</fct_object_id.obj_name>
+		<fct_function>L</fct_function>
+		<fct_action_id.act_name/>
+		<fct_view_id.viw_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Grant</name>
+	<action>upsert</action>
+	<data>
+		<grt_group_id.grp_name>ODS_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>ODSAPIAgroSolsBretagne-CUD</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>ODSAPIAgroSolsBretagne</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>ODS_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>ODSArbreRemarquable-R</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>ODSArbreRemarquable</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>ODS_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>ODSDomain-D</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>D</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>ODSDomain</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<grt_group_id.grp_name>ODS_USER</grt_group_id.grp_name>
+		<grt_function_id.fct_name>ODSHotspotParisWifi-R</grt_function_id.fct_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>ODSHotspotParisWifi</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
+		<grt_function_id.fct_function>L</grt_function_id.fct_function>
+		<grt_activ>1</grt_activ>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Map</name>
+	<action>upsert</action>
+	<data>
+		<map_domain_id.obd_name>ODSDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>ODSHotspotParisWifi</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>74000</map_order>
+		<map_ext/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>ODSDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>ODSArbreRemarquable</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>74010</map_order>
+		<map_ext/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<map_domain_id.obd_name>ODSDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>ODSAPIAgroSolsBretagne</map_object_id.obj_name>
+		<map_process_id.pcs_name/>
+		<map_order>74020</map_order>
+		<map_ext/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>ViewItem</name>
+	<action>upsert</action>
+	<data>
+		<vwi_view_id.viw_name>ODSDemoHome</vwi_view_id.viw_name>
+		<vwi_position>1</vwi_position>
+		<vwi_type>N</vwi_type>
+		<vwi_title>0</vwi_title>
+		<vwi_research_id.rch_name/>
+		<vwi_research_id.rch_object_id.obo_name/>
+		<vwi_research_id.rch_user_id.usr_login/>
+		<vwi_search_spec/>
+		<vwi_lov_code/>
+		<vwi_show/>
+		<vwi_url/>
+		<vwi_image/>
+		<vwi_crosstab_id.ctb_name/>
+		<vwi_printtmpl_id.prt_name/>
+		<vwi_printtmpl_id.prt_lang/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>ViewGroup</name>
+	<action>upsert</action>
+	<data>
+		<vig_view_id.viw_name>ODSDemoHome</vig_view_id.viw_name>
+		<vig_group_id.grp_name>ODS_USER</vig_group_id.grp_name>
+		<vig_group_id.grp_comment/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Resource</name>
+	<action>upsert</action>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>ICO</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>apiagro</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/apiagro.png</res_image>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>ICO</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>opendatasoft</res_code>
+		<res_cached>1</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/opendatasoft.png</res_image>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>opendatasoft-module</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/opendatasoft-module.png</res_image>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>opendatasoft-module-full</res_code>
+		<res_cached>1</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/opendatasoft-module-full.png</res_image>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>TranslateDomain</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obd_name>ODSDomain</tsl_id.obd_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>OpenDataSoft</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obd_name>ODSDomain</tsl_id.obd_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>OpenDataSoft</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>TranslateObject</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>ODSAPIAgroSolsBretagne</tsl_id.obo_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Brittany soil</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>ODSArbreRemarquable</tsl_id.obo_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Remarquable tree Paris</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>ODSHotspotParisWifi</tsl_id.obo_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Paris WiFi hotspot</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>ODSAPIAgroSolsBretagne</tsl_id.obo_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Sol Bretagne</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>ODSArbreRemarquable</tsl_id.obo_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Arbre remarquable Paris</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObject>O</tsl_typeObject>
+		<tsl_id.obo_name>ODSHotspotParisWifi</tsl_id.obo_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Hotspot WiFi Paris</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>TranslateView</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeView>V</tsl_typeView>
+		<tsl_id.viw_name>ODSDemoHome</tsl_id.viw_name>
+		<tsl_lang>ANY</tsl_lang>
+		<tsl_value>OpenDataSoft® demo</tsl_value>
+		<tsl_help/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+</simplicite>
