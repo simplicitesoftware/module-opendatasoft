@@ -105,7 +105,7 @@ To import this module:
 		<obd_view_id.viw_name>ODSDemoHome</obd_view_id.viw_name>
 		<obd_nohome>0</obd_nohome>
 		<obd_icon>opendatasoft</obd_icon>
-		<obd_order>74000</obd_order>
+		<obd_order>86000</obd_order>
 		<obd_domain_id.obd_name/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -394,24 +394,24 @@ To import this module:
 		<map_domain_id.obd_name>ODSDomain</map_domain_id.obd_name>
 		<map_object_id.obj_name>ODSHotspotParisWifi</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
-		<map_order>74000</map_order>
-		<map_ext/>
+		<map_order>86010</map_order>
+		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
 	<data>
 		<map_domain_id.obd_name>ODSDomain</map_domain_id.obd_name>
 		<map_object_id.obj_name>ODSArbreRemarquable</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
-		<map_order>74010</map_order>
-		<map_ext/>
+		<map_order>86020</map_order>
+		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
 	<data>
 		<map_domain_id.obd_name>ODSDomain</map_domain_id.obd_name>
 		<map_object_id.obj_name>ODSAPIAgroSolsBretagne</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
-		<map_order>74020</map_order>
-		<map_ext/>
+		<map_order>86030</map_order>
+		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
 </object>
