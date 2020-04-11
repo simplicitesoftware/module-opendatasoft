@@ -863,6 +863,7 @@ definitions:
       geom_x_y:
         description: Geo point
         type: string
+        example: latitude;longitude
       complementadresse:
         description: COMPLEMENTADRESSE
         type: string
@@ -890,6 +891,7 @@ definitions:
       dateplantation:
         description: DATEPLANTATION
         type: string
+        example: yyyy-MM-dd HH:mm:ss
       libellefrancais:
         description: LIBELLEFRANCAIS
         type: string

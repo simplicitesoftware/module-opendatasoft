@@ -45,10 +45,6 @@ OpenDataSoft _Sols de Bretagne (API Agro)_ object.
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 
-### Custom actions
-
-No custom action
-
 `ODSArbreRemarquable` business object definition
 ------------------------------------------------
 
@@ -61,10 +57,6 @@ OpenDataSoft _Remarquable trees in Paris_ object.
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 
-### Custom actions
-
-No custom action
-
 `ODSHotspotParisWifi` business object definition
 ------------------------------------------------
 
@@ -76,8 +68,4 @@ OpenDataSoft _Wifi hotspots in Paris_ object.
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-
-### Custom actions
-
-No custom action
 
