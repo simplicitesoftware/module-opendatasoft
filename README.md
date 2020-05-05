@@ -11,6 +11,8 @@
 `OpenDataSoft` module definition
 ================================
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-OpenDataSoft&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-OpenDataSoft)
+
 ### Introduction
 
 **OpenDataSoft** remote business objects examples.
