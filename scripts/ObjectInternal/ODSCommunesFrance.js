@@ -4,6 +4,6 @@
 console.traceHooks(false, false, false);
 console.traceObject(false);
 
-ODSHotspotParisWifi.postLoad = function() {
+ODSCommunesFrance.postLoad = function() {
 
 };

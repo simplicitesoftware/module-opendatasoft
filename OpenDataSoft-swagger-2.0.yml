@@ -2,8 +2,244 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: OpenDataSoft 4.0
+#             |_| Module: OpenDataSoft 5
 paths:
+  /rest/ODSCommunesFrance:
+    get:
+      summary: Search ODSCommunesFrance business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-odscommunesfrance-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfODSCommunesFrance'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: geo_point_2d
+        description: Search filter for Geo Point
+        type: string
+        required: false
+      - in: query
+        name: geo_shape
+        description: Search filter for Geo Shape
+        type: string
+        required: false
+      - in: query
+        name: year
+        description: Search filter for Année
+        type: string
+        required: false
+      - in: query
+        name: reg_code
+        description: Search filter for Code Officiel Région
+        type: string
+        required: false
+      - in: query
+        name: reg_name
+        description: Search filter for Nom Officiel Région
+        type: string
+        required: false
+      - in: query
+        name: dep_code
+        description: Search filter for Code Officiel Département
+        type: string
+        required: false
+      - in: query
+        name: dep_name
+        description: Search filter for Nom Officiel Département
+        type: string
+        required: false
+      - in: query
+        name: arrdep_code
+        description: Search filter for Code Officiel Arrondissement départemental
+        type: string
+        required: false
+      - in: query
+        name: arrdep_name
+        description: Search filter for Nom Officiel Arrondissement départemental
+        type: string
+        required: false
+      - in: query
+        name: ze2010_code
+        description: Search filter for Code Officiel Zone emploi 2010
+        type: string
+        required: false
+      - in: query
+        name: ze2010_name
+        description: Search filter for Nom Officiel Zone emploi 2010
+        type: string
+        required: false
+      - in: query
+        name: bv2012_code
+        description: Search filter for Code Officiel Bassin vie 2012
+        type: string
+        required: false
+      - in: query
+        name: bv2012_name
+        description: Search filter for Nom Officiel Bassin vie 2012
+        type: string
+        required: false
+      - in: query
+        name: epci_code
+        description: Search filter for Code Officiel EPCI
+        type: string
+        required: false
+      - in: query
+        name: epci_name
+        description: Search filter for Nom Officiel EPCI
+        type: string
+        required: false
+      - in: query
+        name: ept_code
+        description: Search filter for Code Officiel EPT
+        type: string
+        required: false
+      - in: query
+        name: ept_name
+        description: Search filter for Nom Officiel EPT
+        type: string
+        required: false
+      - in: query
+        name: com_code
+        description: Search filter for Code Officiel Commune
+        type: string
+        required: false
+      - in: query
+        name: com_current_code
+        description: Search filter for Code Officiel Courant Commune
+        type: string
+        required: false
+      - in: query
+        name: com_name
+        description: Search filter for Nom Officiel Commune
+        type: string
+        required: false
+      - in: query
+        name: com_name_upper
+        description: Search filter for Nom Officiel Commune Majuscule
+        type: string
+        required: false
+      - in: query
+        name: com_name_lower
+        description: Search filter for Nom Officiel Commune Minuscule
+        type: string
+        required: false
+      - in: query
+        name: com_area_code
+        description: Search filter for Code Iso 3166-3 Zone
+        type: string
+        required: false
+      - in: query
+        name: com_type
+        description: Search filter for Type
+        type: string
+        required: false
+      - in: query
+        name: com_tuu2017_code
+        description: Search filter for Code TUU2017
+        type: string
+        required: false
+      - in: query
+        name: com_tuu2017_name
+        description: Search filter for Libellé TUU2017
+        type: string
+        required: false
+      - in: query
+        name: com_cataeu2010_code
+        description: Search filter for Code CATAEU2010
+        type: string
+        required: false
+      - in: query
+        name: com_cataeu2010_name
+        description: Search filter for Libellé CATAEU2010
+        type: string
+        required: false
+      - in: query
+        name: com_uu2010_code
+        description: Search filter for Code UU2010
+        type: string
+        required: false
+      - in: query
+        name: com_uu2010_status
+        description: Search filter for Statut Commune
+        type: string
+        required: false
+      - in: query
+        name: com_tau2017_code
+        description: Search filter for Code TAU2017
+        type: string
+        required: false
+      - in: query
+        name: com_tau2017_name
+        description: Search filter for Libellé TAU2017
+        type: string
+        required: false
+      - in: query
+        name: com_tduu2017_code
+        description: Search filter for Code TDUU2017
+        type: string
+        required: false
+      - in: query
+        name: com_tduu2017_name
+        description: Search filter for Libellé TDUU2017
+        type: string
+        required: false
+      - in: query
+        name: com_au2010_code
+        description: Search filter for Code AU2010
+        type: string
+        required: false
+      - in: query
+        name: com_cv_code
+        description: Search filter for Code Canton Ville
+        type: string
+        required: false
+      - in: query
+        name: com_in_ctu
+        description: Search filter for Fait Partie d'une CTU
+        type: string
+        required: false
+      - in: query
+        name: com_siren_code
+        description: Search filter for SIREN
+        type: string
+        required: false
+      - in: query
+        name: com_is_mountain_area
+        description: Search filter for Zone Montagne
+        type: string
+        required: false
+      tags:
+      - ODSCommunesFrance
   /login:
     get:
       summary: Login (obtain bearer token)
@@ -32,168 +268,6 @@ paths:
         - token
       tags:
       - session
-  /rest/ODSAPIAgroSolsBretagne/{row_id}:
-    post:
-      summary: Create a new ODSAPIAgroSolsBretagnebusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsapiagrosolsbretagne-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ODSAPIAgroSolsBretagne'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/ODSAPIAgroSolsBretagne'
-        in: body
-        name: body
-      tags:
-      - ODSAPIAgroSolsBretagne
-      consumes:
-      - application/json
-    get:
-      summary: Get a ODSAPIAgroSolsBretagne business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsapiagrosolsbretagne-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ODSAPIAgroSolsBretagne'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - ODSAPIAgroSolsBretagne
-    delete:
-      summary: Delete a ODSAPIAgroSolsBretagne business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsapiagrosolsbretagne-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - ODSAPIAgroSolsBretagne
-    put:
-      summary: Update a ODSAPIAgroSolsBretagnebusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsapiagrosolsbretagne-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ODSAPIAgroSolsBretagne'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/ODSAPIAgroSolsBretagne'
-        in: body
-        name: body
-      tags:
-      - ODSAPIAgroSolsBretagne
-      consumes:
-      - application/json
   /rest/ODSArbreRemarquable/{row_id}:
     post:
       summary: Create a new ODSArbreRemarquablebusiness object record
@@ -373,18 +447,18 @@ paths:
           description: Unauthorized
       tags:
       - session
-  /rest/ODSHotspotParisWifi/{row_id}:
+  /rest/ODSCommunesFrance/{row_id}:
     post:
-      summary: Create a new ODSHotspotParisWifibusiness object record
+      summary: Create a new ODSCommunesFrancebusiness object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-odshotspotpariswifi-create
+      operationId: obj-odscommunesfrance-create
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ODSHotspotParisWifi'
+            $ref: '#/definitions/ODSCommunesFrance'
           description: Success in creating a new business object record
         '400':
           schema:
@@ -405,24 +479,24 @@ paths:
         type: string
         required: true
       - schema:
-          $ref: '#/definitions/ODSHotspotParisWifi'
+          $ref: '#/definitions/ODSCommunesFrance'
         in: body
         name: body
       tags:
-      - ODSHotspotParisWifi
+      - ODSCommunesFrance
       consumes:
       - application/json
     get:
-      summary: Get a ODSHotspotParisWifi business object record
+      summary: Get a ODSCommunesFrance business object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-odshotspotpariswifi-get
+      operationId: obj-odscommunesfrance-get
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ODSHotspotParisWifi'
+            $ref: '#/definitions/ODSCommunesFrance'
           description: Success in getting a single business object record
         '401':
           schema:
@@ -458,14 +532,14 @@ paths:
         type: boolean
         required: false
       tags:
-      - ODSHotspotParisWifi
+      - ODSCommunesFrance
     delete:
-      summary: Delete a ODSHotspotParisWifi business object record
+      summary: Delete a ODSCommunesFrance business object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-odshotspotpariswifi-delete
+      operationId: obj-odscommunesfrance-delete
       responses:
         '200':
           description: Success in deleting a business object record
@@ -492,18 +566,18 @@ paths:
         type: string
         required: true
       tags:
-      - ODSHotspotParisWifi
+      - ODSCommunesFrance
     put:
-      summary: Update a ODSHotspotParisWifibusiness object record
+      summary: Update a ODSCommunesFrancebusiness object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-odshotspotpariswifi-update
+      operationId: obj-odscommunesfrance-update
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ODSHotspotParisWifi'
+            $ref: '#/definitions/ODSCommunesFrance'
           description: Success in updating a business object record
         '400':
           schema:
@@ -528,79 +602,13 @@ paths:
         type: string
         required: true
       - schema:
-          $ref: '#/definitions/ODSHotspotParisWifi'
+          $ref: '#/definitions/ODSCommunesFrance'
         in: body
         name: body
       tags:
-      - ODSHotspotParisWifi
+      - ODSCommunesFrance
       consumes:
       - application/json
-  /rest/ODSHotspotParisWifi:
-    get:
-      summary: Search ODSHotspotParisWifi business object records or get contextualized
-        metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odshotspotpariswifi-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfODSHotspotParisWifi'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: nom_site
-        description: Search filter for Nom site
-        type: string
-        required: false
-      - in: query
-        name: adresse
-        description: Search filter for Adresse
-        type: string
-        required: false
-      - in: query
-        name: cp
-        description: Search filter for CP
-        type: string
-        required: false
-      - in: query
-        name: ville
-        description: Search filter for VILLE
-        type: string
-        required: false
-      - in: query
-        name: adresse_complete
-        description: Search filter for Adresse complète
-        type: string
-        required: false
-      tags:
-      - ODSHotspotParisWifi
   /rest/ODSArbreRemarquable:
     get:
       summary: Search ODSArbreRemarquable business object records or get contextualized
@@ -742,47 +750,6 @@ paths:
         required: false
       tags:
       - ODSArbreRemarquable
-  /rest/ODSAPIAgroSolsBretagne:
-    get:
-      summary: Search ODSAPIAgroSolsBretagne business object records or get contextualized
-        metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsapiagrosolsbretagne-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfODSAPIAgroSolsBretagne'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      tags:
-      - ODSAPIAgroSolsBretagne
   /:
     get:
       summary: Get user session information
@@ -825,14 +792,22 @@ definitions:
         type: integer
         enum:
         - 404
+  ActionResult:
+    type: object
+    properties:
+      result:
+        description: Action result
+        type: string
   ArrayOfODSArbreRemarquable:
     type: array
     items:
       $ref: '#/definitions/ODSArbreRemarquable'
-  ArrayOfODSAPIAgroSolsBretagne:
-    type: array
-    items:
-      $ref: '#/definitions/ODSAPIAgroSolsBretagne'
+  TreeviewData:
+    type: object
+    properties:
+      item:
+        description: Object item with lists of linked objects' items
+        type: object
   ODSArbreRemarquable:
     type: object
     properties:
@@ -910,49 +885,6 @@ definitions:
       content:
         description: Content (plain text or base64 encoded)
         type: string
-  ArrayOfODSHotspotParisWifi:
-    type: array
-    items:
-      $ref: '#/definitions/ODSHotspotParisWifi'
-  ActionResult:
-    type: object
-    properties:
-      result:
-        description: Action result
-        type: string
-  ODSHotspotParisWifi:
-    type: object
-    properties:
-      ville:
-        description: VILLE
-        type: string
-      adresse_complete:
-        description: Adresse complète
-        type: string
-      adresse:
-        description: Adresse
-        type: string
-      row_id:
-        description: Unique technical row ID
-        type: string
-      cp:
-        description: CP
-        type: string
-      nom_site:
-        description: Nom site
-        type: string
-  TreeviewData:
-    type: object
-    properties:
-      item:
-        description: Object item with lists of linked objects' items
-        type: object
-  ODSAPIAgroSolsBretagne:
-    type: object
-    properties:
-      row_id:
-        description: Unique technical row ID
-        type: string
   Error400:
     type: object
     properties:
@@ -964,6 +896,135 @@ definitions:
         type: integer
         enum:
         - 400
+  ODSCommunesFrance:
+    type: object
+    properties:
+      com_name_lower:
+        description: Nom Officiel Commune Minuscule
+        type: string
+      com_tau2017_code:
+        description: Code TAU2017
+        type: string
+      com_in_ctu:
+        description: Fait Partie d'une CTU
+        type: string
+      year:
+        description: Année
+        type: string
+        example: yyyy-MM-dd
+      com_cataeu2010_code:
+        description: Code CATAEU2010
+        type: string
+      com_tuu2017_code:
+        description: Code TUU2017
+        type: string
+      com_uu2010_status:
+        description: Statut Commune
+        type: string
+      com_tduu2017_name:
+        description: Libellé TDUU2017
+        type: string
+      dep_code:
+        description: Code Officiel Département
+        type: string
+      ept_name:
+        description: Nom Officiel EPT
+        type: string
+      com_current_code:
+        description: Code Officiel Courant Commune
+        type: string
+      geo_point_2d:
+        description: Geo Point
+        type: string
+        example: latitude;longitude
+      arrdep_code:
+        description: Code Officiel Arrondissement départemental
+        type: string
+      ze2010_name:
+        description: Nom Officiel Zone emploi 2010
+        type: string
+      bv2012_name:
+        description: Nom Officiel Bassin vie 2012
+        type: string
+      reg_name:
+        description: Nom Officiel Région
+        type: string
+      com_tau2017_name:
+        description: Libellé TAU2017
+        type: string
+      epci_name:
+        description: Nom Officiel EPCI
+        type: string
+      com_name:
+        description: Nom Officiel Commune
+        type: string
+      com_type:
+        description: Type
+        type: string
+      com_cataeu2010_name:
+        description: Libellé CATAEU2010
+        type: string
+      com_name_upper:
+        description: Nom Officiel Commune Majuscule
+        type: string
+      geo_shape:
+        description: Geo Shape
+        type: string
+      dep_name:
+        description: Nom Officiel Département
+        type: string
+      com_area_code:
+        description: Code Iso 3166-3 Zone
+        type: string
+      ept_code:
+        description: Code Officiel EPT
+        type: string
+      com_tuu2017_name:
+        description: Libellé TUU2017
+        type: string
+      bv2012_code:
+        description: Code Officiel Bassin vie 2012
+        type: string
+      arrdep_name:
+        description: Nom Officiel Arrondissement départemental
+        type: string
+      com_au2010_code:
+        description: Code AU2010
+        type: string
+      com_cv_code:
+        description: Code Canton Ville
+        type: string
+      ze2010_code:
+        description: Code Officiel Zone emploi 2010
+        type: string
+      com_tduu2017_code:
+        description: Code TDUU2017
+        type: string
+      epci_code:
+        description: Code Officiel EPCI
+        type: string
+      com_code:
+        description: Code Officiel Commune
+        type: string
+      com_siren_code:
+        description: SIREN
+        type: string
+      com_uu2010_code:
+        description: Code UU2010
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+      com_is_mountain_area:
+        description: Zone Montagne
+        type: string
+      reg_code:
+        description: Code Officiel Région
+        type: string
+  ArrayOfODSCommunesFrance:
+    type: array
+    items:
+      $ref: '#/definitions/ODSCommunesFrance'
   Error401:
     type: object
     properties:
@@ -1008,11 +1069,9 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module OpenDataSoft
   title: OpenDataSoft
-  version: '4.0'
+  version: '5'
 tags:
-- name: ODSAPIAgroSolsBretagne
-  description: Brittany soil
 - name: ODSArbreRemarquable
   description: Remarquable tree Paris
-- name: ODSHotspotParisWifi
-  description: Paris WiFi hotspot
+- name: ODSCommunesFrance
+  description: French cities

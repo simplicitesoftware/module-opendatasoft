@@ -35,18 +35,6 @@ To import this module:
 
 - Click on the _Import module_ button
 
-`ODSAPIAgroSolsBretagne` business object definition
----------------------------------------------------
-
-OpenDataSoft _Sols de Bretagne (API Agro)_ object.
-
-**Note**: the fields are retreived from OpenDataSoft metadata
-
-### Fields
-
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-
 `ODSArbreRemarquable` business object definition
 ------------------------------------------------
 
@@ -56,11 +44,11 @@ OpenDataSoft _Remarquable trees in Paris_ object.
 
 ### Fields
 
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 
-`ODSHotspotParisWifi` business object definition
-------------------------------------------------
+`ODSCommunesFrance` business object definition
+----------------------------------------------
 
 OpenDataSoft _Wifi hotspots in Paris_ object.
 
@@ -68,6 +56,6 @@ OpenDataSoft _Wifi hotspots in Paris_ object.
 
 ### Fields
 
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 
