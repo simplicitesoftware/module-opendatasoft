@@ -97,9 +97,6 @@ components:
         row_id:
           description: Unique technical row ID
           type: string
-        objectid:
-          description: OBJECTID
-          type: integer
     PublicationResult:
       type: object
       properties:
@@ -126,8 +123,8 @@ components:
         com_name_lower:
           description: Nom Officiel Commune Minuscule
           type: string
-        com_tau2017_code:
-          description: Code TAU2017
+        com_uu2020_code:
+          description: Code UU2020
           type: string
         com_in_ctu:
           description: Fait Partie d'une CTU
@@ -139,14 +136,11 @@ components:
         com_cataeu2010_code:
           description: Code CATAEU2010
           type: string
-        com_tuu2017_code:
-          description: Code TUU2017
-          type: string
         com_uu2010_status:
-          description: Statut Commune
+          description: Statut Commune UU2010
           type: string
-        com_tduu2017_name:
-          description: Libellé TDUU2017
+        com_cateaav2020_code:
+          description: Code CATEAAV2020
           type: string
         dep_code:
           description: Code Officiel Département
@@ -156,6 +150,9 @@ components:
           type: string
         com_current_code:
           description: Code Officiel Courant Commune
+          type: string
+        ze2020_code:
+          description: Code Officiel Zone emploi 2020
           type: string
         geo_point_2d:
           description: Geo Point
@@ -172,9 +169,6 @@ components:
           type: string
         reg_name:
           description: Nom Officiel Région
-          type: string
-        com_tau2017_name:
-          description: Libellé TAU2017
           type: string
         epci_name:
           description: Nom Officiel EPCI
@@ -194,6 +188,9 @@ components:
         geo_shape:
           description: Geo Shape
           type: string
+        com_cateaav2020_name:
+          description: Libellé CATEAAV2020
+          type: string
         dep_name:
           description: Nom Officiel Département
           type: string
@@ -202,9 +199,6 @@ components:
           type: string
         ept_code:
           description: Code Officiel EPT
-          type: string
-        com_tuu2017_name:
-          description: Libellé TUU2017
           type: string
         bv2012_code:
           description: Code Officiel Bassin vie 2012
@@ -218,11 +212,17 @@ components:
         com_cv_code:
           description: Code Canton Ville
           type: string
+        com_aav2020_code:
+          description: Code AAV2020
+          type: string
         ze2010_code:
           description: Code Officiel Zone emploi 2010
           type: string
-        com_tduu2017_code:
-          description: Code TDUU2017
+        com_uu2020_status:
+          description: Statut Commune UU2020
+          type: string
+        ze2020_name:
+          description: Nom Officiel Zone emploi 2020
           type: string
         epci_code:
           description: Code Officiel EPCI
@@ -395,14 +395,14 @@ paths:
       - schema:
           type: string
         in: query
-        name: ze2010_code
-        description: Search filter for Code Officiel Zone emploi 2010
+        name: ze2020_code
+        description: Search filter for Code Officiel Zone emploi 2020
         required: false
       - schema:
           type: string
         in: query
-        name: ze2010_name
-        description: Search filter for Nom Officiel Zone emploi 2010
+        name: ze2020_name
+        description: Search filter for Nom Officiel Zone emploi 2020
         required: false
       - schema:
           type: string
@@ -485,14 +485,14 @@ paths:
       - schema:
           type: string
         in: query
-        name: com_tuu2017_code
-        description: Search filter for Code TUU2017
+        name: ze2010_name
+        description: Search filter for Nom Officiel Zone emploi 2010
         required: false
       - schema:
           type: string
         in: query
-        name: com_tuu2017_name
-        description: Search filter for Libellé TUU2017
+        name: ze2010_code
+        description: Search filter for Code Officiel Zone emploi 2010
         required: false
       - schema:
           type: string
@@ -516,37 +516,43 @@ paths:
           type: string
         in: query
         name: com_uu2010_status
-        description: Search filter for Statut Commune
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_tau2017_code
-        description: Search filter for Code TAU2017
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_tau2017_name
-        description: Search filter for Libellé TAU2017
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_tduu2017_code
-        description: Search filter for Code TDUU2017
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_tduu2017_name
-        description: Search filter for Libellé TDUU2017
+        description: Search filter for Statut Commune UU2010
         required: false
       - schema:
           type: string
         in: query
         name: com_au2010_code
         description: Search filter for Code AU2010
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: com_cateaav2020_code
+        description: Search filter for Code CATEAAV2020
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: com_cateaav2020_name
+        description: Search filter for Libellé CATEAAV2020
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: com_uu2020_code
+        description: Search filter for Code UU2020
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: com_uu2020_status
+        description: Search filter for Statut Commune UU2020
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: com_aav2020_code
+        description: Search filter for Code AAV2020
         required: false
       - schema:
           type: string
@@ -1061,10 +1067,16 @@ paths:
         description: Documentation?
         required: false
       - schema:
+          type: number
+        in: query
+        name: idbase
+        description: Search filter for IDBASE
+        required: false
+      - schema:
           type: string
         in: query
-        name: geom_x_y
-        description: Search filter for Geo point
+        name: libellefrancais
+        description: Search filter for LIBELLEFRANCAIS
         required: false
       - schema:
           type: string
@@ -1083,12 +1095,6 @@ paths:
         in: query
         name: adresse
         description: Search filter for ADRESSE
-        required: false
-      - schema:
-          type: number
-        in: query
-        name: idbase
-        description: Search filter for IDBASE
         required: false
       - schema:
           type: string
@@ -1169,16 +1175,10 @@ paths:
         description: Search filter for REMARQUABLE
         required: false
       - schema:
-          type: integer
-        in: query
-        name: objectid
-        description: Search filter for OBJECTID
-        required: false
-      - schema:
           type: string
         in: query
-        name: libellefrancais
-        description: Search filter for LIBELLEFRANCAIS
+        name: geom_x_y
+        description: Search filter for Geo point
         required: false
       tags:
       - ODSArbreRemarquable
