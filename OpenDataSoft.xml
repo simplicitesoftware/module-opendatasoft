@@ -6,14 +6,14 @@
 	<data>
 		<mdl_name>OpenDataSoft</mdl_name>
 		<mdl_version>5</mdl_version>
-		<mdl_prefix/>
+		<mdl_prefix>ods</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
 	"origin": {
 		"uri": "https://github.com/simplicitesoftware/module-opendatasoft.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd>2020-01-16 13:05:24</mdl_lastupd>
+		<mdl_type/>
 		<mdl_comment><![CDATA[[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-OpenDataSoft&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-OpenDataSoft)
 
 ### Introduction
@@ -54,7 +54,6 @@ To import this module:
 		<thm_color3>#4fbaad</thm_color3>
 		<thm_text3/>
 		<thm_base>light</thm_base>
-		<thm_css_doc>files/Theme/opendatasoft/opendatasoft_gen.css</thm_css_doc>
 		<thm_addon/>
 		<thm_searchbox/>
 		<thm_active/>
@@ -134,6 +133,354 @@ To import this module:
 	</data>
 </object>
 <object>
+	<name>Field</name>
+	<action>upsert</action>
+	<data>
+		<fld_name>odsComComCode</fld_name>
+		<fld_dbname>com_code</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>1</fld_required>
+		<fld_fonctid>1</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>10</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>odsComComName</fld_name>
+		<fld_dbname>com_name</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>1</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>255</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>odsComComNameUpper</fld_name>
+		<fld_dbname>com_name_upper</fld_dbname>
+		<fld_visible>2</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>1</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>255</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>odsComCoords</fld_name>
+		<fld_dbname>geo_point_2d</fld_dbname>
+		<fld_visible>2</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>25</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>50</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>odsComDepCode</fld_name>
+		<fld_dbname>dep_code</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>10</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>odsComDepName</fld_name>
+		<fld_dbname>dep_name</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>255</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>odsComRegCode</fld_name>
+		<fld_dbname>reg_code</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>10</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>odsComRegName</fld_name>
+		<fld_dbname>reg_name</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>255</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>Template</name>
+	<action>upsert</action>
+	<data>
+		<tpl_name>ODSCommunesFrance</tpl_name>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>]]></tpl_ui>
+		<tpl_min/>
+		<tpl_image/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>ObjectFieldArea</name>
+	<action>upsert</action>
+	<data>
+		<ofa_name>ODSCommunesFrance-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>0</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="field" data-field="odsComComCode"></div>
+    </div>
+    <div class="col-sm-8">
+      <div class="field" data-field="odsComComName"></div>
+      <div class="field" data-field="odsComComNameUpper"></div>
+    </div>
+  </div>
+  <div class="field" data-field="odsComCoords"></div>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="field" data-field="odsComRegCode"></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="field" data-field="odsComRegName"></div>
+    </div>
+    <div class="col-sm-2">
+      <div class="field" data-field="odsComDepCode"></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="field" data-field="odsComDepName"></div>
+    </div>
+  </div>
+</div>]]></ofa_ui>
+		<ofa_icon/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
 	<name>Domain</name>
 	<action>upsert</action>
 	<data>
@@ -141,7 +488,7 @@ To import this module:
 		<obd_comment/>
 		<obd_type>D</obd_type>
 		<obd_view_id.viw_name>ODSHome</obd_view_id.viw_name>
-		<obd_nohome>0</obd_nohome>
+		<obd_nohome>1</obd_nohome>
 		<obd_icon>opendatasoft</obd_icon>
 		<obd_order>86000</obd_order>
 		<obd_domain_id.obd_name/>
@@ -154,6 +501,7 @@ To import this module:
 	<data>
 		<obo_name>ODSArbreRemarquable</obo_name>
 		<obo_dbtable>service-opendatasoft</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>0</obo_usets>
@@ -162,7 +510,10 @@ To import this module:
 
 **Note**: the fields are retreived from OpenDataSoft metadata]]></obo_comment>
 		<obo_type>O</obo_type>
-		<obo_searchspec><![CDATA[{"name": "arbresremarquablesparis2011"}]]></obo_searchspec>
+		<obo_searchspec><![CDATA[{
+    "name": "arbresremarquablesparis2011",
+    "version": 2
+}]]></obo_searchspec>
 		<obo_delspec/>
 		<obo_exportorder/>
 		<obo_distinct>0</obo_distinct>
@@ -212,7 +563,7 @@ To import this module:
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>rtp</obo_prefix>
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
@@ -222,22 +573,24 @@ To import this module:
 	<data>
 		<obo_name>ODSCommunesFrance</obo_name>
 		<obo_dbtable>service-opendatasoft</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
-		<obo_script_id>scripts/ObjectInternal/ODSCommunesFrance.js</obo_script_id>
+		<obo_script_id/>
 		<obo_usets>0</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
-		<obo_comment><![CDATA[OpenDataSoft _Wifi hotspots in Paris_ object.
-
-**Note**: the fields are retreived from OpenDataSoft metadata]]></obo_comment>
+		<obo_comment><![CDATA[OpenDataSoft _French cities_ object.]]></obo_comment>
 		<obo_type>O</obo_type>
-		<obo_searchspec><![CDATA[{"name": "georef-france-commune"}]]></obo_searchspec>
+		<obo_searchspec><![CDATA[{
+    "name": "georef-france-commune",
+    "version": 2
+}]]></obo_searchspec>
 		<obo_delspec/>
 		<obo_exportorder/>
 		<obo_distinct>0</obo_distinct>
 		<obo_indexable>0</obo_indexable>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref/>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_template_id.tpl_name>ODSCommunesFrance</obo_template_id.tpl_name>
 		<obo_cache>D</obo_cache>
 		<obo_copy>1</obo_copy>
 		<obo_export>1</obo_export>
@@ -280,12 +633,248 @@ To import this module:
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>com</obo_prefix>
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
 		<obo_sortable>1</obo_sortable>
 		<obo_list_areas>1</obo_list_areas>
+	</data>
+</object>
+<object>
+	<name>ObjectFieldSystem</name>
+	<action>upsert</action>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComComCode</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>10</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order>1</obf_dfault_order>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComComName</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>20</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComComNameUpper</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>30</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComCoords</obf_field_id.fld_name>
+		<obf_field_id.fld_type>25</obf_field_id.fld_type>
+		<obf_order>40</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComRegCode</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>50</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComRegName</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>60</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComDepCode</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>70</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>ODSCommunesFrance</obf_object_id.obo_name>
+		<obf_field_id.fld_name>odsComDepName</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>80</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>ODSCommunesFrance-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
 </object>
 <object>
@@ -407,6 +996,20 @@ To import this module:
 	</data>
 </object>
 <object>
+	<name>PlaceMap</name>
+	<action>upsert</action>
+	<data>
+		<pcm_name>ODSCommunesFranceMap</pcm_name>
+		<pcm_object_id.obo_name>ODSCommunesFrance</pcm_object_id.obo_name>
+		<pcm_address_id.fld_name>odsComComName</pcm_address_id.fld_name>
+		<pcm_coords_id.fld_name>odsComCoords</pcm_coords_id.fld_name>
+		<pcm_label1_id.fld_name>odsComComCode</pcm_label1_id.fld_name>
+		<pcm_label2_id.fld_name/>
+		<pcm_label3_id.fld_name/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
 	<name>Resource</name>
 	<action>upsert</action>
 	<data>
@@ -423,7 +1026,6 @@ To import this module:
 		<res_code>apiagro</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/apiagro.png</res_image>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -441,7 +1043,6 @@ To import this module:
 		<res_code>opendatasoft</res_code>
 		<res_cached>1</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/opendatasoft.png</res_image>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -459,7 +1060,6 @@ To import this module:
 		<res_code>opendatasoft-module</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/opendatasoft-module.svg</res_image>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -477,8 +1077,221 @@ To import this module:
 		<res_code>opendatasoft-module-screenshot</res_code>
 		<res_cached>1</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/opendatasoft-module-screenshot.png</res_image>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>TranslateField</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComComCode</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>City code</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComComName</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>City name</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComComNameUpper</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Uppercase city name</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComCoords</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Geographical coordinates</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComDepCode</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Area code</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComDepName</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Area name</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComRegCode</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Region code</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComRegName</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Region name</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComComCode</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Code de la commune</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComComName</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Nom de la commune</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComComNameUpper</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Nom de la commune (majuscules)</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComCoords</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Coordonnées géographiques</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComDepCode</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Code du département</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComDepName</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Nom du département</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComRegCode</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Code de la région</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>odsComRegName</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Nom de la région</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+</object>
+<object>
+	<name>TranslateFieldArea</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>ODSCommunesFrance-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>City of France</tsl_value>
+		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>ODSCommunesFrance-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Commune de France</tsl_value>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
 </object>
@@ -509,7 +1322,7 @@ To import this module:
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>ODSArbreRemarquable</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Remarquable tree Paris</tsl_value>
+		<tsl_value>Remarquable tree in Paris|Remarquable trees in Paris</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -517,7 +1330,7 @@ To import this module:
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>ODSCommunesFrance</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>French cities</tsl_value>
+		<tsl_value>City of France|Cities of France</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -525,7 +1338,7 @@ To import this module:
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>ODSArbreRemarquable</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Arbre remarquable Paris</tsl_value>
+		<tsl_value>Arbre remarquable de Paris|Arbres remarquables de Paris</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -533,7 +1346,7 @@ To import this module:
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>ODSCommunesFrance</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Communes Françaises</tsl_value>
+		<tsl_value>Commune de France|Communes de France</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>

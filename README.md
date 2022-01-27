@@ -50,12 +50,18 @@ OpenDataSoft _Remarquable trees in Paris_ object.
 `ODSCommunesFrance` business object definition
 ----------------------------------------------
 
-OpenDataSoft _Wifi hotspots in Paris_ object.
-
-**Note**: the fields are retreived from OpenDataSoft metadata
+OpenDataSoft _French cities_ object.
 
 ### Fields
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `odsComComCode`                                              | char(10)                                 | yes*     | yes       |          | -                                                                                |
+| `odsComComName`                                              | char(255)                                | yes      | yes       |          | -                                                                                |
+| `odsComComNameUpper`                                         | char(255)                                |          | yes       |          | -                                                                                |
+| `odsComCoords`                                               | geocoords                                |          | yes       |          | -                                                                                |
+| `odsComRegCode`                                              | char(10)                                 |          | yes       |          | -                                                                                |
+| `odsComRegName`                                              | char(255)                                |          | yes       |          | -                                                                                |
+| `odsComDepCode`                                              | char(10)                                 |          | yes       |          | -                                                                                |
+| `odsComDepName`                                              | char(255)                                |          | yes       |          | -                                                                                |
 

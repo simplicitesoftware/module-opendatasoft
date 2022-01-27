@@ -1,9 +1,9 @@
 {
-    "date": "2021-05-07 21:54:24",
+    "date": "2022-01-27 21:52:14",
     "name": "OpenDataSoft",
     "format": "xml",
     "files": ["OpenDataSoft.xml"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-opendatasoft.git"}},
     "version": "5",
-    "platform": "5.2.0-alpha"
+    "platform": "5.2.0-beta"
 }

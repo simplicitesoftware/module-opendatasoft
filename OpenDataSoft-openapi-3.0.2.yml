@@ -16,22 +16,10 @@ components:
           type: integer
           enum:
           - 404
-    ActionResult:
-      type: object
-      properties:
-        result:
-          description: Action result
-          type: string
     ArrayOfODSArbreRemarquable:
       type: array
       items:
         $ref: '#/components/schemas/ODSArbreRemarquable'
-    TreeviewData:
-      type: object
-      properties:
-        item:
-          description: Object item with lists of linked objects' items
-          type: object
     ODSArbreRemarquable:
       type: object
       properties:
@@ -106,6 +94,50 @@ components:
         content:
           description: Content (plain text or base64 encoded)
           type: string
+    PlaceData:
+      type: object
+      properties:
+        coord:
+          description: Geographical coordinates
+          type: string
+        address:
+          description: Address
+          type: string
+        row_id:
+          description: Row ID
+          type: string
+        label1:
+          description: 'Label #1'
+          type: string
+        label2:
+          description: 'Label #2'
+          type: string
+        label3:
+          description: 'Label #3'
+          type: string
+    PlaceMapData:
+      type: object
+      properties:
+        places:
+          description: Places
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceData'
+        name:
+          description: Name
+          type: string
+    ActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
+          type: string
+    TreeviewData:
+      type: object
+      properties:
+        item:
+          description: Object item with lists of linked objects' items
+          type: object
     Error400:
       type: object
       properties:
@@ -120,130 +152,33 @@ components:
     ODSCommunesFrance:
       type: object
       properties:
-        com_name_lower:
-          description: Nom Officiel Commune Minuscule
+        odsComRegName:
+          description: Region name
           type: string
-        com_uu2020_code:
-          description: Code UU2020
+        odsComDepName:
+          description: Area name
           type: string
-        com_in_ctu:
-          description: Fait Partie d'une CTU
-          type: string
-        year:
-          description: Année
-          type: string
-          example: yyyy-MM-dd
-        com_cataeu2010_code:
-          description: Code CATAEU2010
-          type: string
-        com_uu2010_status:
-          description: Statut Commune UU2010
-          type: string
-        com_cateaav2020_code:
-          description: Code CATEAAV2020
-          type: string
-        dep_code:
-          description: Code Officiel Département
-          type: string
-        ept_name:
-          description: Nom Officiel EPT
-          type: string
-        com_current_code:
-          description: Code Officiel Courant Commune
-          type: string
-        ze2020_code:
-          description: Code Officiel Zone emploi 2020
-          type: string
-        geo_point_2d:
-          description: Geo Point
+        odsComCoords:
+          description: Geographical coordinates
           type: string
           example: latitude;longitude
-        arrdep_code:
-          description: Code Officiel Arrondissement départemental
+        odsComComNameUpper:
+          description: Uppercase city name
           type: string
-        ze2010_name:
-          description: Nom Officiel Zone emploi 2010
+        odsComRegCode:
+          description: Region code
           type: string
-        bv2012_name:
-          description: Nom Officiel Bassin vie 2012
+        odsComDepCode:
+          description: Area code
           type: string
-        reg_name:
-          description: Nom Officiel Région
-          type: string
-        epci_name:
-          description: Nom Officiel EPCI
-          type: string
-        com_name:
-          description: Nom Officiel Commune
-          type: string
-        com_type:
-          description: Type
-          type: string
-        com_cataeu2010_name:
-          description: Libellé CATAEU2010
-          type: string
-        com_name_upper:
-          description: Nom Officiel Commune Majuscule
-          type: string
-        geo_shape:
-          description: Geo Shape
-          type: string
-        com_cateaav2020_name:
-          description: Libellé CATEAAV2020
-          type: string
-        dep_name:
-          description: Nom Officiel Département
-          type: string
-        com_area_code:
-          description: Code Iso 3166-3 Zone
-          type: string
-        ept_code:
-          description: Code Officiel EPT
-          type: string
-        bv2012_code:
-          description: Code Officiel Bassin vie 2012
-          type: string
-        arrdep_name:
-          description: Nom Officiel Arrondissement départemental
-          type: string
-        com_au2010_code:
-          description: Code AU2010
-          type: string
-        com_cv_code:
-          description: Code Canton Ville
-          type: string
-        com_aav2020_code:
-          description: Code AAV2020
-          type: string
-        ze2010_code:
-          description: Code Officiel Zone emploi 2010
-          type: string
-        com_uu2020_status:
-          description: Statut Commune UU2020
-          type: string
-        ze2020_name:
-          description: Nom Officiel Zone emploi 2020
-          type: string
-        epci_code:
-          description: Code Officiel EPCI
-          type: string
-        com_code:
-          description: Code Officiel Commune
-          type: string
-        com_siren_code:
-          description: SIREN
-          type: string
-        com_uu2010_code:
-          description: Code UU2010
+        odsComComCode:
+          description: City code
           type: string
         row_id:
           description: Unique technical row ID
           type: string
-        com_is_mountain_area:
-          description: Zone Montagne
-          type: string
-        reg_code:
-          description: Code Officiel Région
+        odsComComName:
+          description: City name
           type: string
     ArrayOfODSCommunesFrance:
       type: array
@@ -341,242 +276,50 @@ paths:
       - schema:
           type: string
         in: query
-        name: geo_point_2d
-        description: Search filter for Geo Point
+        name: odsComComCode
+        description: Search filter for City code
         required: false
       - schema:
           type: string
         in: query
-        name: geo_shape
-        description: Search filter for Geo Shape
+        name: odsComComName
+        description: Search filter for City name
         required: false
       - schema:
           type: string
         in: query
-        name: year
-        description: Search filter for Année
+        name: odsComComNameUpper
+        description: Search filter for Uppercase city name
         required: false
       - schema:
           type: string
         in: query
-        name: reg_code
-        description: Search filter for Code Officiel Région
+        name: odsComCoords
+        description: Search filter for Geographical coordinates
         required: false
       - schema:
           type: string
         in: query
-        name: reg_name
-        description: Search filter for Nom Officiel Région
+        name: odsComRegCode
+        description: Search filter for Region code
         required: false
       - schema:
           type: string
         in: query
-        name: dep_code
-        description: Search filter for Code Officiel Département
+        name: odsComRegName
+        description: Search filter for Region name
         required: false
       - schema:
           type: string
         in: query
-        name: dep_name
-        description: Search filter for Nom Officiel Département
+        name: odsComDepCode
+        description: Search filter for Area code
         required: false
       - schema:
           type: string
         in: query
-        name: arrdep_code
-        description: Search filter for Code Officiel Arrondissement départemental
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: arrdep_name
-        description: Search filter for Nom Officiel Arrondissement départemental
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: ze2020_code
-        description: Search filter for Code Officiel Zone emploi 2020
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: ze2020_name
-        description: Search filter for Nom Officiel Zone emploi 2020
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: bv2012_code
-        description: Search filter for Code Officiel Bassin vie 2012
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: bv2012_name
-        description: Search filter for Nom Officiel Bassin vie 2012
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: epci_code
-        description: Search filter for Code Officiel EPCI
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: epci_name
-        description: Search filter for Nom Officiel EPCI
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: ept_code
-        description: Search filter for Code Officiel EPT
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: ept_name
-        description: Search filter for Nom Officiel EPT
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_code
-        description: Search filter for Code Officiel Commune
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_current_code
-        description: Search filter for Code Officiel Courant Commune
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_name
-        description: Search filter for Nom Officiel Commune
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_name_upper
-        description: Search filter for Nom Officiel Commune Majuscule
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_name_lower
-        description: Search filter for Nom Officiel Commune Minuscule
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_area_code
-        description: Search filter for Code Iso 3166-3 Zone
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_type
-        description: Search filter for Type
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: ze2010_name
-        description: Search filter for Nom Officiel Zone emploi 2010
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: ze2010_code
-        description: Search filter for Code Officiel Zone emploi 2010
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_cataeu2010_code
-        description: Search filter for Code CATAEU2010
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_cataeu2010_name
-        description: Search filter for Libellé CATAEU2010
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_uu2010_code
-        description: Search filter for Code UU2010
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_uu2010_status
-        description: Search filter for Statut Commune UU2010
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_au2010_code
-        description: Search filter for Code AU2010
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_cateaav2020_code
-        description: Search filter for Code CATEAAV2020
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_cateaav2020_name
-        description: Search filter for Libellé CATEAAV2020
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_uu2020_code
-        description: Search filter for Code UU2020
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_uu2020_status
-        description: Search filter for Statut Commune UU2020
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_aav2020_code
-        description: Search filter for Code AAV2020
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_cv_code
-        description: Search filter for Code Canton Ville
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_in_ctu
-        description: Search filter for Fait Partie d'une CTU
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_siren_code
-        description: Search filter for SIREN
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: com_is_mountain_area
-        description: Search filter for Zone Montagne
+        name: odsComDepName
+        description: Search filter for Area name
         required: false
       tags:
       - ODSCommunesFrance
@@ -1020,6 +763,46 @@ paths:
         required: true
       tags:
       - ODSCommunesFrance
+  /rest/ODSCommunesFrance/{row_id}/placemap:ODSCommunesFranceMap:
+    get:
+      summary: Call a place map for ODSCommunesFrance business object
+      security:
+      - bearerAuth: []
+      operationId: obj-odscommunesfrance-placemap-odscommunesfrancemap
+      responses:
+        '200':
+          description: Success in calling the place map adat
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaceMapData'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - ODSCommunesFrance
   /rest/ODSArbreRemarquable:
     get:
       summary: Search ODSArbreRemarquable business object records or get contextualized
@@ -1221,6 +1004,6 @@ info:
   version: '5'
 tags:
 - name: ODSArbreRemarquable
-  description: Remarquable tree Paris
+  description: Remarquable tree in Paris
 - name: ODSCommunesFrance
-  description: French cities
+  description: City of France
