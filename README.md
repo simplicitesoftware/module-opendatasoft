@@ -50,18 +50,18 @@ OpenDataSoft _Remarquable trees in Paris_ object.
 `ODSCommunesFrance` business object definition
 ----------------------------------------------
 
-OpenDataSoft _French cities_ object.
+OpenDataSoft _cities of France_ object.
 
 ### Fields
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `odsComComCode`                                              | char(10)                                 | yes*     | yes       |          | -                                                                                |
-| `odsComComName`                                              | char(255)                                | yes      | yes       |          | -                                                                                |
-| `odsComComNameUpper`                                         | char(255)                                |          | yes       |          | -                                                                                |
-| `odsComCoords`                                               | geocoords                                |          | yes       |          | -                                                                                |
-| `odsComRegCode`                                              | char(10)                                 |          | yes       |          | -                                                                                |
-| `odsComRegName`                                              | char(255)                                |          | yes       |          | -                                                                                |
-| `odsComDepCode`                                              | char(10)                                 |          | yes       |          | -                                                                                |
-| `odsComDepName`                                              | char(255)                                |          | yes       |          | -                                                                                |
+| `odsComComCode`                                              | char(10)                                 | yes*     | yes       |          | City code                                                                        |
+| `odsComComName`                                              | char(255)                                | yes      | yes       |          | City name                                                                        |
+| `odsComComNameUpper`                                         | char(255)                                |          | yes       |          | City name (uppercase)                                                            |
+| `odsComCoords`                                               | geocoords                                |          | yes       |          | Geographical coordinates                                                         |
+| `odsComRegCode`                                              | char(10)                                 |          | yes       |          | Region code                                                                      |
+| `odsComRegName`                                              | char(255)                                |          | yes       |          | Region name                                                                      |
+| `odsComDepCode`                                              | char(10)                                 |          | yes       |          | Area code                                                                        |
+| `odsComDepName`                                              | char(255)                                |          | yes       |          | Area name                                                                        |
 

@@ -168,7 +168,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[City code]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -205,7 +205,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[City name]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -242,7 +242,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[City name (uppercase)]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -279,7 +279,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Geographical coordinates]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -316,7 +316,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Area code]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -353,7 +353,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Area name]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -390,7 +390,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Region code]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -427,7 +427,7 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Region name]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>OpenDataSoft</row_module_id.mdl_name>
 	</data>
@@ -578,7 +578,7 @@ To import this module:
 		<obo_script_id/>
 		<obo_usets>0</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
-		<obo_comment><![CDATA[OpenDataSoft _French cities_ object.]]></obo_comment>
+		<obo_comment><![CDATA[OpenDataSoft _cities of France_ object.]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[{
     "name": "georef-france-commune",

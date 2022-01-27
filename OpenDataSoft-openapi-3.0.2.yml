@@ -163,7 +163,7 @@ components:
           type: string
           example: latitude;longitude
         odsComComNameUpper:
-          description: Uppercase city name
+          description: City name (uppercase)
           type: string
         odsComRegCode:
           description: Region code
@@ -289,7 +289,7 @@ paths:
           type: string
         in: query
         name: odsComComNameUpper
-        description: Search filter for Uppercase city name
+        description: Search filter for City name (uppercase)
         required: false
       - schema:
           type: string

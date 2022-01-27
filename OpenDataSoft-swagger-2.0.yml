@@ -55,7 +55,7 @@ paths:
         required: false
       - in: query
         name: odsComComNameUpper
-        description: Search filter for Uppercase city name
+        description: Search filter for City name (uppercase)
         type: string
         required: false
       - in: query
@@ -812,7 +812,7 @@ definitions:
         type: string
         example: latitude;longitude
       odsComComNameUpper:
-        description: Uppercase city name
+        description: City name (uppercase)
         type: string
       odsComRegCode:
         description: Region code
