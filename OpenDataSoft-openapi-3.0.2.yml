@@ -16,11 +16,143 @@ components:
           type: integer
           enum:
           - 404
-    ArrayOfODSArbreRemarquable:
+    PublicationResult:
+      type: object
+      properties:
+        mime:
+          description: MIME type
+          type: string
+        content:
+          description: Content (plain text or base64 encoded)
+          type: string
+    PlaceData:
+      type: object
+      properties:
+        coord:
+          description: Geographical coordinates
+          type: string
+        address:
+          description: Address
+          type: string
+        row_id:
+          description: Row ID
+          type: string
+        label1:
+          description: 'Label #1'
+          type: string
+        label2:
+          description: 'Label #2'
+          type: string
+        label3:
+          description: 'Label #3'
+          type: string
+    PlaceMapData:
+      type: object
+      properties:
+        places:
+          description: Places
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceData'
+        name:
+          description: Name
+          type: string
+    ActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
+          type: string
+    OdsCommunesFrance:
+      type: object
+      properties:
+        odsComRegName:
+          description: Region name
+          type: string
+        odsComDepName:
+          description: Area name
+          type: string
+        odsComCoords:
+          description: Geographical coordinates
+          type: string
+          example: latitude;longitude
+        odsComComNameUpper:
+          description: City name (uppercase)
+          type: string
+        odsComRegCode:
+          description: Region code
+          type: string
+        odsComDepCode:
+          description: Area code
+          type: string
+        odsComComCode:
+          description: City code
+          type: string
+        row_id:
+          description: Unique technical row ID
+          type: string
+        odsComComName:
+          description: City name
+          type: string
+    ArrayOfOdsCommunesFrance:
       type: array
       items:
-        $ref: '#/components/schemas/ODSArbreRemarquable'
-    ODSArbreRemarquable:
+        $ref: '#/components/schemas/OdsCommunesFrance'
+    TreeviewData:
+      type: object
+      properties:
+        item:
+          description: Object item with lists of linked objects' items
+          type: object
+    Error400:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 400
+    Error401:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 401
+    Error500:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 500
+    ArrayOfOdsArbreRemarquable:
+      type: array
+      items:
+        $ref: '#/components/schemas/OdsArbreRemarquable'
+    Error403:
+      type: object
+      properties:
+        error:
+          description: Error message
+          type: string
+        status:
+          description: Error status
+          type: integer
+          enum:
+          - 403
+    OdsArbreRemarquable:
       type: object
       properties:
         idemplacement:
@@ -85,138 +217,6 @@ components:
         row_id:
           description: Unique technical row ID
           type: string
-    PublicationResult:
-      type: object
-      properties:
-        mime:
-          description: MIME type
-          type: string
-        content:
-          description: Content (plain text or base64 encoded)
-          type: string
-    PlaceData:
-      type: object
-      properties:
-        coord:
-          description: Geographical coordinates
-          type: string
-        address:
-          description: Address
-          type: string
-        row_id:
-          description: Row ID
-          type: string
-        label1:
-          description: 'Label #1'
-          type: string
-        label2:
-          description: 'Label #2'
-          type: string
-        label3:
-          description: 'Label #3'
-          type: string
-    PlaceMapData:
-      type: object
-      properties:
-        places:
-          description: Places
-          type: array
-          items:
-            $ref: '#/components/schemas/PlaceData'
-        name:
-          description: Name
-          type: string
-    ActionResult:
-      type: object
-      properties:
-        result:
-          description: Action result
-          type: string
-    TreeviewData:
-      type: object
-      properties:
-        item:
-          description: Object item with lists of linked objects' items
-          type: object
-    Error400:
-      type: object
-      properties:
-        error:
-          description: Error message
-          type: string
-        status:
-          description: Error status
-          type: integer
-          enum:
-          - 400
-    ODSCommunesFrance:
-      type: object
-      properties:
-        odsComRegName:
-          description: Region name
-          type: string
-        odsComDepName:
-          description: Area name
-          type: string
-        odsComCoords:
-          description: Geographical coordinates
-          type: string
-          example: latitude;longitude
-        odsComComNameUpper:
-          description: City name (uppercase)
-          type: string
-        odsComRegCode:
-          description: Region code
-          type: string
-        odsComDepCode:
-          description: Area code
-          type: string
-        odsComComCode:
-          description: City code
-          type: string
-        row_id:
-          description: Unique technical row ID
-          type: string
-        odsComComName:
-          description: City name
-          type: string
-    ArrayOfODSCommunesFrance:
-      type: array
-      items:
-        $ref: '#/components/schemas/ODSCommunesFrance'
-    Error401:
-      type: object
-      properties:
-        error:
-          description: Error message
-          type: string
-        status:
-          description: Error status
-          type: integer
-          enum:
-          - 401
-    Error500:
-      type: object
-      properties:
-        error:
-          description: Error message
-          type: string
-        status:
-          description: Error status
-          type: integer
-          enum:
-          - 500
-    Error403:
-      type: object
-      properties:
-        error:
-          description: Error message
-          type: string
-        status:
-          description: Error status
-          type: integer
-          enum:
-          - 403
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -227,143 +227,16 @@ components:
       type: http
 openapi: 3.0.2
 paths:
-  /rest/ODSCommunesFrance:
-    get:
-      summary: Search ODSCommunesFrance business object records or get contextualized
-        metadata
-      security:
-      - bearerAuth: []
-      operationId: obj-odscommunesfrance-search
-      responses:
-        '200':
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ArrayOfODSCommunesFrance'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: boolean
-        in: query
-        name: _metadata
-        description: Metadata?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _count
-        description: Count?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _doc
-        description: Documentation?
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComComCode
-        description: Search filter for City code
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComComName
-        description: Search filter for City name
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComComNameUpper
-        description: Search filter for City name (uppercase)
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComCoords
-        description: Search filter for Geographical coordinates
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComRegCode
-        description: Search filter for Region code
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComRegName
-        description: Search filter for Region name
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComDepCode
-        description: Search filter for Area code
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: odsComDepName
-        description: Search filter for Area name
-        required: false
-      tags:
-      - ODSCommunesFrance
-  /login:
-    get:
-      summary: Login (obtain bearer token)
-      security:
-      - basicAuth: []
-      operationId: login
-      responses:
-        '200':
-          description: Successful login
-          content:
-            application/json: {}
-            text/plain: {}
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-      parameters:
-      - schema:
-          type: string
-          enum:
-          - json
-          - oauth2
-          - token
-        in: query
-        name: _output
-        description: Optional output format
-        required: false
-      tags:
-      - session
-  /rest/ODSArbreRemarquable/{row_id}:
+  /rest/OdsArbreRemarquable/{row_id}:
     post:
-      summary: Create a new ODSArbreRemarquablebusiness object record
+      summary: Create a new OdsArbreRemarquablebusiness object record
       security:
       - bearerAuth: []
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ODSArbreRemarquable'
+              $ref: '#/components/schemas/OdsArbreRemarquable'
       operationId: obj-odsarbreremarquable-create
       responses:
         '200':
@@ -371,7 +244,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ODSArbreRemarquable'
+                $ref: '#/components/schemas/OdsArbreRemarquable'
         '400':
           description: Bad request
           content:
@@ -398,9 +271,9 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - ODSArbreRemarquable
+      - OdsArbreRemarquable
     get:
-      summary: Get a ODSArbreRemarquable business object record
+      summary: Get a OdsArbreRemarquable business object record
       security:
       - bearerAuth: []
       operationId: obj-odsarbreremarquable-get
@@ -410,7 +283,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ODSArbreRemarquable'
+                $ref: '#/components/schemas/OdsArbreRemarquable'
         '401':
           description: Unauthorized
           content:
@@ -455,9 +328,9 @@ paths:
         description: Inline objects?
         required: false
       tags:
-      - ODSArbreRemarquable
+      - OdsArbreRemarquable
     delete:
-      summary: Delete a ODSArbreRemarquable business object record
+      summary: Delete a OdsArbreRemarquable business object record
       security:
       - bearerAuth: []
       operationId: obj-odsarbreremarquable-delete
@@ -498,16 +371,16 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - ODSArbreRemarquable
+      - OdsArbreRemarquable
     put:
-      summary: Update a ODSArbreRemarquablebusiness object record
+      summary: Update a OdsArbreRemarquablebusiness object record
       security:
       - bearerAuth: []
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ODSArbreRemarquable'
+              $ref: '#/components/schemas/OdsArbreRemarquable'
       operationId: obj-odsarbreremarquable-update
       responses:
         '200':
@@ -515,7 +388,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ODSArbreRemarquable'
+                $ref: '#/components/schemas/OdsArbreRemarquable'
         '400':
           description: Bad request
           content:
@@ -548,264 +421,10 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - ODSArbreRemarquable
-  /logout:
+      - OdsArbreRemarquable
+  /rest/OdsArbreRemarquable:
     get:
-      summary: Logout (revoke bearer token)
-      security:
-      - bearerAuth: []
-      operationId: logout
-      responses:
-        '200':
-          description: Successfull logout
-          content:
-            application/json: {}
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-      tags:
-      - session
-  /rest/ODSCommunesFrance/{row_id}:
-    post:
-      summary: Create a new ODSCommunesFrancebusiness object record
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ODSCommunesFrance'
-      operationId: obj-odscommunesfrance-create
-      responses:
-        '200':
-          description: Success in creating a new business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ODSCommunesFrance'
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - ODSCommunesFrance
-    get:
-      summary: Get a ODSCommunesFrance business object record
-      security:
-      - bearerAuth: []
-      operationId: obj-odscommunesfrance-get
-      responses:
-        '200':
-          description: Success in getting a single business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ODSCommunesFrance'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_documents
-        description: Inline documents?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_objects
-        description: Inline objects?
-        required: false
-      tags:
-      - ODSCommunesFrance
-    delete:
-      summary: Delete a ODSCommunesFrance business object record
-      security:
-      - bearerAuth: []
-      operationId: obj-odscommunesfrance-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-          content:
-            application/json: {}
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - ODSCommunesFrance
-    put:
-      summary: Update a ODSCommunesFrancebusiness object record
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ODSCommunesFrance'
-      operationId: obj-odscommunesfrance-update
-      responses:
-        '200':
-          description: Success in updating a business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ODSCommunesFrance'
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - ODSCommunesFrance
-  /rest/ODSCommunesFrance/{row_id}/placemap:ODSCommunesFranceMap:
-    get:
-      summary: Call a place map for ODSCommunesFrance business object
-      security:
-      - bearerAuth: []
-      operationId: obj-odscommunesfrance-placemap-odscommunesfrancemap
-      responses:
-        '200':
-          description: Success in calling the place map adat
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PlaceMapData'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - ODSCommunesFrance
-  /rest/ODSArbreRemarquable:
-    get:
-      summary: Search ODSArbreRemarquable business object records or get contextualized
+      summary: Search OdsArbreRemarquable business object records or get contextualized
         metadata
       security:
       - bearerAuth: []
@@ -817,7 +436,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArrayOfODSArbreRemarquable'
+                $ref: '#/components/schemas/ArrayOfOdsArbreRemarquable'
         '401':
           description: Unauthorized
           content:
@@ -964,7 +583,388 @@ paths:
         description: Search filter for Geo point
         required: false
       tags:
-      - ODSArbreRemarquable
+      - OdsArbreRemarquable
+  /login:
+    get:
+      summary: Login (obtain bearer token)
+      security:
+      - basicAuth: []
+      operationId: login
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json: {}
+            text/plain: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: string
+          enum:
+          - json
+          - oauth2
+          - token
+        in: query
+        name: _output
+        description: Optional output format
+        required: false
+      tags:
+      - session
+  /logout:
+    get:
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      tags:
+      - session
+  /rest/OdsCommunesFrance:
+    get:
+      summary: Search OdsCommunesFrance business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-odscommunesfrance-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfOdsCommunesFrance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComComCode
+        description: Search filter for City code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComComName
+        description: Search filter for City name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComComNameUpper
+        description: Search filter for City name (uppercase)
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComCoords
+        description: Search filter for Geographical coordinates
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComRegCode
+        description: Search filter for Region code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComRegName
+        description: Search filter for Region name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComDepCode
+        description: Search filter for Area code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: odsComDepName
+        description: Search filter for Area name
+        required: false
+      tags:
+      - OdsCommunesFrance
+  /rest/OdsCommunesFrance/{row_id}/placemap:ODSCommunesFranceMap:
+    get:
+      summary: Call a place map for OdsCommunesFrance business object
+      security:
+      - bearerAuth: []
+      operationId: obj-odscommunesfrance-placemap-odscommunesfrancemap
+      responses:
+        '200':
+          description: Success in calling the place map adat
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlaceMapData'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - OdsCommunesFrance
+  /rest/OdsCommunesFrance/{row_id}:
+    post:
+      summary: Create a new OdsCommunesFrancebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OdsCommunesFrance'
+      operationId: obj-odscommunesfrance-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OdsCommunesFrance'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - OdsCommunesFrance
+    get:
+      summary: Get a OdsCommunesFrance business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odscommunesfrance-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OdsCommunesFrance'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - OdsCommunesFrance
+    delete:
+      summary: Delete a OdsCommunesFrance business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-odscommunesfrance-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - OdsCommunesFrance
+    put:
+      summary: Update a OdsCommunesFrancebusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OdsCommunesFrance'
+      operationId: obj-odscommunesfrance-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OdsCommunesFrance'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - OdsCommunesFrance
   /:
     get:
       summary: Get user session information
@@ -1003,7 +1003,7 @@ info:
   title: OpenDataSoft
   version: '5'
 tags:
-- name: ODSArbreRemarquable
+- name: OdsArbreRemarquable
   description: Remarquable tree in Paris
-- name: ODSCommunesFrance
+- name: OdsCommunesFrance
   description: City of France

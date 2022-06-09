@@ -35,7 +35,7 @@ To import this module:
 
 - Click on the _Import module_ button
 
-`ODSArbreRemarquable` business object definition
+`OdsArbreRemarquable` business object definition
 ------------------------------------------------
 
 OpenDataSoft _Remarquable trees in Paris_ object.
@@ -47,7 +47,7 @@ OpenDataSoft _Remarquable trees in Paris_ object.
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 
-`ODSCommunesFrance` business object definition
+`OdsCommunesFrance` business object definition
 ----------------------------------------------
 
 OpenDataSoft _cities of France_ object.
