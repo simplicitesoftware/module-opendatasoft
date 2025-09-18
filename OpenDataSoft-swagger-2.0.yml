@@ -3,182 +3,21 @@
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
 #             |_| Module: OpenDataSoft 5
+basePath: /api
 paths:
-  /rest/OdsArbreRemarquable/{row_id}:
-    post:
-      summary: Create a new OdsArbreRemarquablebusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsarbreremarquable-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/OdsArbreRemarquable'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/OdsArbreRemarquable'
-        in: body
-        name: body
-      tags:
-      - OdsArbreRemarquable
-      consumes:
-      - application/json
+  /rest/OdsJCDecauxBikeStations:
     get:
-      summary: Get a OdsArbreRemarquable business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsarbreremarquable-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/OdsArbreRemarquable'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - OdsArbreRemarquable
-    delete:
-      summary: Delete a OdsArbreRemarquable business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsarbreremarquable-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - OdsArbreRemarquable
-    put:
-      summary: Update a OdsArbreRemarquablebusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-odsarbreremarquable-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/OdsArbreRemarquable'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/OdsArbreRemarquable'
-        in: body
-        name: body
-      tags:
-      - OdsArbreRemarquable
-      consumes:
-      - application/json
-  /rest/OdsArbreRemarquable:
-    get:
-      summary: Search OdsArbreRemarquable business object records or get contextualized
+      summary: Search OdsJCDecauxBikeStations business object records or get contextualized
         metadata
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-odsarbreremarquable-search
+      operationId: obj-odsjcdecauxbikestations-search
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ArrayOfOdsArbreRemarquable'
+            $ref: '#/definitions/ArrayOfOdsJCDecauxBikeStations'
           description: Success in searching business object records (or in getting
             contextualized business object metadata, documentation, ...)
         '401':
@@ -206,102 +45,67 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: idbase
-        description: Search filter for IDBASE
-        type: number
+        name: number
+        description: Search filter for number
+        type: integer
         required: false
       - in: query
-        name: libellefrancais
-        description: Search filter for LIBELLEFRANCAIS
+        name: name
+        description: Search filter for name
         type: string
         required: false
       - in: query
-        name: genre
-        description: Search filter for GENRE
+        name: address
+        description: Search filter for address
         type: string
         required: false
       - in: query
-        name: espece
-        description: Search filter for ESPECE
+        name: position
+        description: Search filter for position
         type: string
         required: false
       - in: query
-        name: adresse
-        description: Search filter for ADRESSE
+        name: banking
+        description: Search filter for banking
         type: string
         required: false
       - in: query
-        name: typeemplacement
-        description: Search filter for TYPEEMPLACEMENT
+        name: bonus
+        description: Search filter for bonus
         type: string
         required: false
       - in: query
-        name: domanialite
-        description: Search filter for DOMANIALITE
+        name: status
+        description: Search filter for status
         type: string
         required: false
       - in: query
-        name: arrondissement
-        description: Search filter for ARRONDISSEMENT
+        name: contract_name
+        description: Search filter for Contract Name
         type: string
         required: false
       - in: query
-        name: complementadresse
-        description: Search filter for COMPLEMENTADRESSE
-        type: string
+        name: bike_stands
+        description: Search filter for Bike Stands
+        type: integer
         required: false
       - in: query
-        name: numero
-        description: Search filter for NUMERO
-        type: string
+        name: available_bike_stands
+        description: Search filter for Available Bike Stands
+        type: integer
         required: false
       - in: query
-        name: idemplacement
-        description: Search filter for IDEMPLACEMENT
-        type: string
+        name: available_bikes
+        description: Search filter for Available Bikes
+        type: integer
         required: false
       - in: query
-        name: circonferenceencm
-        description: Search filter for CIRCONFERENCE EN CM
-        type: number
-        required: false
-      - in: query
-        name: hauteurenm
-        description: Search filter for HAUTEUR EN M
-        type: number
-        required: false
-      - in: query
-        name: stadedeveloppement
-        description: Search filter for STADEDEVELOPPEMENT
-        type: string
-        required: false
-      - in: query
-        name: pepiniere
-        description: Search filter for PEPINIERE
-        type: string
-        required: false
-      - in: query
-        name: varieteoucultivar
-        description: Search filter for VARIETE OU CULTIVAR
-        type: string
-        required: false
-      - in: query
-        name: dateplantation
-        description: Search filter for DATEPLANTATION
-        type: string
-        required: false
-      - in: query
-        name: remarquable
-        description: Search filter for REMARQUABLE
-        type: string
-        required: false
-      - in: query
-        name: geom_x_y
-        description: Search filter for Geo point
+        name: last_update
+        description: Search filter for Last Update
         type: string
         required: false
       tags:
-      - OdsArbreRemarquable
+      - OdsJCDecauxBikeStations
   /login:
     get:
       summary: Login (obtain bearer token)
@@ -347,6 +151,168 @@ paths:
           description: Unauthorized
       tags:
       - session
+  /rest/OdsJCDecauxBikeStations/{row_id}:
+    post:
+      summary: Create a new OdsJCDecauxBikeStations business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-odsjcdecauxbikestations-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/OdsJCDecauxBikeStations'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/OdsJCDecauxBikeStations'
+        in: body
+        name: body
+      tags:
+      - OdsJCDecauxBikeStations
+      consumes:
+      - application/json
+    get:
+      summary: Get a OdsJCDecauxBikeStations business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-odsjcdecauxbikestations-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/OdsJCDecauxBikeStations'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - OdsJCDecauxBikeStations
+    delete:
+      summary: Delete a OdsJCDecauxBikeStations business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-odsjcdecauxbikestations-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - OdsJCDecauxBikeStations
+    put:
+      summary: Update a OdsJCDecauxBikeStations business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-odsjcdecauxbikestations-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/OdsJCDecauxBikeStations'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/OdsJCDecauxBikeStations'
+        in: body
+        name: body
+      tags:
+      - OdsJCDecauxBikeStations
+      consumes:
+      - application/json
   /rest/OdsCommunesFrance:
     get:
       summary: Search OdsCommunesFrance business object records or get contextualized
@@ -463,7 +429,7 @@ paths:
       - OdsCommunesFrance
   /rest/OdsCommunesFrance/{row_id}:
     post:
-      summary: Create a new OdsCommunesFrancebusiness object record
+      summary: Create a new OdsCommunesFrance business object record
       security:
       - bearerAuth: []
       produces:
@@ -582,7 +548,7 @@ paths:
       tags:
       - OdsCommunesFrance
     put:
-      summary: Update a OdsCommunesFrancebusiness object record
+      summary: Update a OdsCommunesFrance business object record
       security:
       - bearerAuth: []
       produces:
@@ -665,6 +631,10 @@ definitions:
         type: integer
         enum:
         - 404
+  ArrayOfOdsJCDecauxBikeStations:
+    type: array
+    items:
+      $ref: '#/definitions/OdsJCDecauxBikeStations'
   PublicationResult:
     type: object
     properties:
@@ -694,6 +664,50 @@ definitions:
         type: string
       label3:
         description: 'Label #3'
+        type: string
+  OdsJCDecauxBikeStations:
+    type: object
+    properties:
+      bike_stands:
+        description: Bike Stands
+        type: integer
+      address:
+        description: address
+        type: string
+      bonus:
+        description: bonus
+        type: string
+      contract_name:
+        description: Contract Name
+        type: string
+      available_bike_stands:
+        description: Available Bike Stands
+        type: integer
+      banking:
+        description: banking
+        type: string
+      number:
+        description: number
+        type: integer
+      available_bikes:
+        description: Available Bikes
+        type: integer
+      last_update:
+        description: Last Update
+        type: string
+        example: yyyy-MM-dd HH:mm:ss
+      name:
+        description: name
+        type: string
+      position:
+        description: position
+        type: string
+        example: latitude;longitude
+      row_id:
+        description: Unique technical row ID
+        type: string
+      status:
+        description: status
         type: string
   PlaceMapData:
     type: object
@@ -786,10 +800,6 @@ definitions:
         type: integer
         enum:
         - 500
-  ArrayOfOdsArbreRemarquable:
-    type: array
-    items:
-      $ref: '#/definitions/OdsArbreRemarquable'
   Error403:
     type: object
     properties:
@@ -801,71 +811,6 @@ definitions:
         type: integer
         enum:
         - 403
-  OdsArbreRemarquable:
-    type: object
-    properties:
-      idemplacement:
-        description: IDEMPLACEMENT
-        type: string
-      pepiniere:
-        description: PEPINIERE
-        type: string
-      typeemplacement:
-        description: TYPEEMPLACEMENT
-        type: string
-      numero:
-        description: NUMERO
-        type: string
-      hauteurenm:
-        description: HAUTEUR EN M
-        type: number
-      espece:
-        description: ESPECE
-        type: string
-      arrondissement:
-        description: ARRONDISSEMENT
-        type: string
-      varieteoucultivar:
-        description: VARIETE OU CULTIVAR
-        type: string
-      geom_x_y:
-        description: Geo point
-        type: string
-        example: latitude;longitude
-      complementadresse:
-        description: COMPLEMENTADRESSE
-        type: string
-      stadedeveloppement:
-        description: STADEDEVELOPPEMENT
-        type: string
-      idbase:
-        description: IDBASE
-        type: number
-      domanialite:
-        description: DOMANIALITE
-        type: string
-      circonferenceencm:
-        description: CIRCONFERENCE EN CM
-        type: number
-      remarquable:
-        description: REMARQUABLE
-        type: string
-      genre:
-        description: GENRE
-        type: string
-      adresse:
-        description: ADRESSE
-        type: string
-      dateplantation:
-        description: DATEPLANTATION
-        type: string
-        example: yyyy-MM-dd HH:mm:ss
-      libellefrancais:
-        description: LIBELLEFRANCAIS
-        type: string
-      row_id:
-        description: Unique technical row ID
-        type: string
 swagger: '2.0'
 info:
   license:
@@ -879,7 +824,7 @@ info:
   title: OpenDataSoft
   version: '5'
 tags:
-- name: OdsArbreRemarquable
-  description: Remarquable tree in Paris
 - name: OdsCommunesFrance
   description: City of France
+- name: OdsJCDecauxBikeStations
+  description: JCDecaux bike station

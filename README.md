@@ -5,7 +5,7 @@
 |___/_|_|_|_| .__/_|_\__|_|\__\___|
             |_| 
 -->
-![](https://docs.simplicite.io//logos/logo250.png)
+![](https://platform.simplicite.io//logos/logo250.png)
 * * *
 
 `OpenDataSoft` module definition
@@ -35,18 +35,6 @@ To import this module:
 
 - Click on the _Import module_ button
 
-`OdsArbreRemarquable` business object definition
-------------------------------------------------
-
-OpenDataSoft _Remarquable trees in Paris_ object.
-
-**Note**: the fields are retreived from OpenDataSoft metadata
-
-### Fields
-
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
-|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-
 `OdsCommunesFrance` business object definition
 ----------------------------------------------
 
@@ -64,4 +52,16 @@ OpenDataSoft _cities of France_ object.
 | `odsComRegName`                                              | char(255)                                |          | yes       |          | Region name                                                                      |
 | `odsComDepCode`                                              | char(10)                                 |          | yes       |          | Area code                                                                        |
 | `odsComDepName`                                              | char(255)                                |          | yes       |          | Area name                                                                        |
+
+`OdsJCDecauxBikeStations` business object definition
+----------------------------------------------------
+
+OpenDataSoft _Remarquable trees in Paris_ object.
+
+**Note**: the fields are retreived from OpenDataSoft metadata
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 
